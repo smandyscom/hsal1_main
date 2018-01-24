@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PRIO_LIST xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    PROJECT_ID="safety.mpnoz" FILE_EXPORT_VERSION="2016-10-05 16:40:44"
+    FILE_STRUCT_VERSION="1" xsi:type="PRIO_LIST">
+    <PRIO_ENTRY id="PRI0001_2">
+        <PRIO_ENTRY_TEXT idref="PRI0001_2"/>
+        <PRIO_ENTRY_VALUE>3</PRIO_ENTRY_VALUE>
+    </PRIO_ENTRY>
+    <PRIO_ENTRY id="PRI0001_3">
+        <PRIO_ENTRY_TEXT idref="PRI0001_3"/>
+        <PRIO_ENTRY_VALUE>8</PRIO_ENTRY_VALUE>
+    </PRIO_ENTRY>
+    <PRIO_ENTRY id="PRI0001_4">
+        <PRIO_ENTRY_TEXT idref="PRI0001_4"/>
+        <PRIO_ENTRY_VALUE>13</PRIO_ENTRY_VALUE>
+    </PRIO_ENTRY>
+</PRIO_LIST>

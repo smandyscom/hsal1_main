@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<SCOPE_TEXT xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    FILE_STRUCT_VERSION="1" FILE_EXPORT_VERSION="2016-10-05 16:40:44"
+    PROJECT_ID="safety.mpnoz" xsi:type="SCOPE_TEXT">
+    <TEXT id="RAN0001_2">
+        <DEV_TEXT>Anlage/Gerät</DEV_TEXT>
+        <EN_TEXT>Plant/device</EN_TEXT>
+    </TEXT>
+    <TEXT id="RAN0001_3">
+        <DEV_TEXT>Prozess</DEV_TEXT>
+        <EN_TEXT>Process</EN_TEXT>
+    </TEXT>
+    <TEXT id="RAN0001_4">
+        <DEV_TEXT>---</DEV_TEXT>
+        <EN_TEXT>---</EN_TEXT>
+    </TEXT>
+</SCOPE_TEXT>

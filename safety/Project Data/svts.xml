@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<MpnozProjectLangSave
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    active-language="en" projectname="safety" crc="26504"
+    version="v10.4.0" isProjectImmutable="false" xsi:type="MpnozProjectLangSave">
+    <BaseTypes/>
+    <LanguageSet>
+        <Language projectLanguage="en" diagnosticLanguage="en"/>
+    </LanguageSet>
+    <Priorities>
+        <SaveTextEntry type="3" id="E100001"/>
+        <SaveTextEntry type="8" id="E100002"/>
+        <SaveTextEntry type="13" id="E100003"/>
+    </Priorities>
+    <Responsibilities>
+        <SaveTextEntry type="1" id="E100007"/>
+        <SaveTextEntry type="2" id="E100008"/>
+        <SaveTextEntry type="3" id="E100009"/>
+        <SaveTextEntry type="4" id="E100011"/>
+        <SaveTextEntry type="5" id="E100012"/>
+        <SaveTextEntry type="6" id="E100006"/>
+        <SaveTextEntry type="7" id="E100014"/>
+    </Responsibilities>
+    <Scopes>
+        <SaveTextEntry type="1" id="E100004"/>
+        <SaveTextEntry type="2" id="E100005"/>
+        <SaveTextEntry type="3" id="E100006"/>
+    </Scopes>
+    <Project>
+        <LocationDescriptions>
+            <HWLocationDesc>
+                <SaveTextEntry type="comm" id="D74925"/>
+                <SaveTextEntry type="base" id="D69815"/>
+            </HWLocationDesc>
+            <IOLocationDesc>
+                <SaveTextEntry type="comm.o0" id="-1"/>
+                <SaveTextEntry type="base.o0" id="-1"/>
+                <SaveTextEntry type="base.o1" id="-1"/>
+                <SaveTextEntry type="base.o2" id="-1"/>
+                <SaveTextEntry type="base.o3" id="-1"/>
+                <SaveTextEntry type="base.i11" id="-1"/>
+                <SaveTextEntry type="base.IM17" id="-1"/>
+                <SaveTextEntry type="base.i10" id="-1"/>
+                <SaveTextEntry type="base.IM18" id="-1"/>
+                <SaveTextEntry type="base.i13" id="-1"/>
+                <SaveTextEntry type="base.i12" id="-1"/>
+                <SaveTextEntry type="base.IM16" id="-1"/>
+                <SaveTextEntry type="base.i15" id="-1"/>
+                <SaveTextEntry type="base.i14" id="-1"/>
+                <SaveTextEntry type="base.i8" id="-1"/>
+                <SaveTextEntry type="base.i9" id="-1"/>
+                <SaveTextEntry type="base.T1M21" id="-1"/>
+                <SaveTextEntry type="base.T0M20" id="-1"/>
+            </IOLocationDesc>
+            <BlockLocationDesc>
+                <BlockLocDescSaveTextEntry x="1" y="0" id="-1"/>
+                <BlockLocDescSaveTextEntry x="6" y="0" id="-1"/>
+            </BlockLocationDesc>
+        </LocationDescriptions>
+        <Hardware>
+            <HwIoEntry type="comm" LocationDescKey="D74925" EquipmentIdKey="-1"/>
+            <HwIoEntry type="base" LocationDescKey="D69815" EquipmentIdKey="-1"/>
+        </Hardware>
+        <IOs>
+            <HwIoEntry type="comm.o0" LocationDescKey="-1" EquipmentIdKey="C63362">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.o0" LocationDescKey="-1" EquipmentIdKey="C5372">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.o1" LocationDescKey="-1" EquipmentIdKey="C32995">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.o2" LocationDescKey="-1" EquipmentIdKey="C5356">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.o3" LocationDescKey="-1" EquipmentIdKey="C24095">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.i11" LocationDescKey="-1" EquipmentIdKey="C89303">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.IM17" LocationDescKey="-1" EquipmentIdKey="C77324">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.i10" LocationDescKey="-1" EquipmentIdKey="C60931">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.IM18" LocationDescKey="-1" EquipmentIdKey="C55496">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.i13" LocationDescKey="-1" EquipmentIdKey="C74713">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.i12" LocationDescKey="-1" EquipmentIdKey="C98365">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.IM16" LocationDescKey="-1" EquipmentIdKey="C72925">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.i15" LocationDescKey="-1" EquipmentIdKey="C79948">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.i14" LocationDescKey="-1" EquipmentIdKey="C71054">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.i8" LocationDescKey="-1" EquipmentIdKey="C17468">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.i9" LocationDescKey="-1" EquipmentIdKey="C23989">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.T1M21" LocationDescKey="-1" EquipmentIdKey="C97497">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="base.T0M20" LocationDescKey="-1" EquipmentIdKey="C10356">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+        </IOs>
+        <Blocks>
+            <GenericBlocks>
+                <BlockEntry x="1" y="0" LocationDescKey="-1" EquipmentIdKey="-1"/>
+                <BlockEntry x="6" y="0" LocationDescKey="-1" EquipmentIdKey="-1"/>
+            </GenericBlocks>
+            <AnalogBlocks/>
+            <SpeedMonitorBlocks/>
+            <DiagnosticPoints/>
+        </Blocks>
+        <ProjectTexts>
+            <Pages>
+                <PageElement PageNumber="1" PageNameKey="-1" PageCommentKey="-1"/>
+            </Pages>
+            <ProjectComment>
+                <SaveTextEntry type="Project_comment" id="-1"/>
+            </ProjectComment>
+        </ProjectTexts>
+        <UserMessages>
+            <UserMessageEntry MessageId="1" key="-1"/>
+            <UserMessageEntry MessageId="2" key="-1"/>
+            <UserMessageEntry MessageId="3" key="-1"/>
+            <UserMessageEntry MessageId="4" key="-1"/>
+            <UserMessageEntry MessageId="5" key="-1"/>
+            <UserMessageEntry MessageId="6" key="-1"/>
+            <UserMessageEntry MessageId="7" key="-1"/>
+            <UserMessageEntry MessageId="8" key="-1"/>
+            <UserMessageEntry MessageId="9" key="-1"/>
+            <UserMessageEntry MessageId="10" key="-1"/>
+            <UserMessageEntry MessageId="11" key="-1"/>
+            <UserMessageEntry MessageId="12" key="-1"/>
+            <UserMessageEntry MessageId="13" key="-1"/>
+            <UserMessageEntry MessageId="14" key="-1"/>
+            <UserMessageEntry MessageId="15" key="-1"/>
+            <UserMessageEntry MessageId="16" key="-1"/>
+            <UserMessageEntry MessageId="17" key="-1"/>
+            <UserMessageEntry MessageId="18" key="-1"/>
+            <UserMessageEntry MessageId="19" key="-1"/>
+            <UserMessageEntry MessageId="20" key="-1"/>
+        </UserMessages>
+        <Annotations/>
+    </Project>
+</MpnozProjectLangSave>

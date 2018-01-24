@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project_connection
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" Name="safety"
+    Address="169.254.60.1" Port="9000" xsi:type="project_connection"/>

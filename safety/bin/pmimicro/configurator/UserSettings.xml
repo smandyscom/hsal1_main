@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<UserSettings xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    version="1.0" xsi:type="UserSettings">
+    <SettingsProtection>false</SettingsProtection>
+    <LogfileProtection>false</LogfileProtection>
+    <User>
+        <Name>CONFIG</Name>
+        <Pwd>100000</Pwd>
+        <Rights>1</Rights>
+    </User>
+    <User>
+        <Name>LOGFILE</Name>
+        <Pwd>200000</Pwd>
+        <Rights>2</Rights>
+    </User>
+    <User>
+        <Name>ADMIN</Name>
+        <Pwd>300000</Pwd>
+        <Rights>3</Rights>
+    </User>
+</UserSettings>
