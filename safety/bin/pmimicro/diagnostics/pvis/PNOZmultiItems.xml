@@ -610,4 +610,10 @@
         <SOFTWAREBLOCK_TYPE idref="SBTY_E_Stop">0</SOFTWAREBLOCK_TYPE>
         <PARAM>1</PARAM>
     </ITEM>
+    <ITEM id="SBID2" tableindex="1Y2">
+        <LOCATION idref="LOC0001_104"/>
+        <LOCDESC idref="LDS0001_62"/>
+        <SOFTWAREBLOCK_TYPE idref="SBTY_TwoHand_Button">0</SOFTWAREBLOCK_TYPE>
+        <PARAM>2</PARAM>
+    </ITEM>
 </ITEMS>

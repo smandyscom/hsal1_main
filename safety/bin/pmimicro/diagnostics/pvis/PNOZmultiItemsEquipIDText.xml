@@ -469,7 +469,7 @@
         <EN_TEXT>base</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_43">
-        <EN_TEXT/>
+        <EN_TEXT>ext</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_44">
         <EN_TEXT/>
@@ -532,7 +532,7 @@
         <EN_TEXT>Expansion Module 6 left</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_64">
-        <EN_TEXT>Expansion Module 1 right</EN_TEXT>
+        <EN_TEXT>ext</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_65">
         <EN_TEXT>Expansion Module 2 right</EN_TEXT>
@@ -565,10 +565,10 @@
         <EN_TEXT>Integrated link interface</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_75">
-        <EN_TEXT/>
+        <EN_TEXT>H1</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_76">
-        <EN_TEXT/>
+        <EN_TEXT>H2</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_77">
         <EN_TEXT/>
@@ -577,16 +577,16 @@
         <EN_TEXT/>
     </TEXT>
     <TEXT id="LOC0001_79">
-        <EN_TEXT/>
+        <EN_TEXT>CyT0307a1</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_80">
-        <EN_TEXT/>
+        <EN_TEXT>CyT0307b1</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_81">
-        <EN_TEXT/>
+        <EN_TEXT>CyT0308a1</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_82">
-        <EN_TEXT/>
+        <EN_TEXT>CyT0308b1</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_83">
         <EN_TEXT>SdK0101NC</EN_TEXT>
@@ -649,4 +649,5 @@
         <EN_TEXT/>
     </TEXT>
     <TEXT id="LOC0001_103"/>
+    <TEXT id="LOC0001_104"/>
 </ITEMS_LOCATION_TEXT>
