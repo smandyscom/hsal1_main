@@ -127,7 +127,22 @@ IB0805F,CioO1,,
 IB0C408,CioO2,,
 IB0C40A,VsK0101,,
 IB0C40C,CioO1,,
-MA00000,,AXIS_INSTANCE_0,PI_W
+MA0,MsA0101,AXIS_INSTANCE_0,DEF_AXIS
+MA64,MsG0501,AXIS_INSTANCE_1,DEF_AXIS
+MA128,MsG0401,AXIS_INSTANCE_2,DEF_AXIS
+MA192,MsG0402,AXIS_INSTANCE_3,DEF_AXIS
+MA256,MsT0301,AXIS_INSTANCE_4,DEF_AXIS
+MA320,MsT0302,AXIS_INSTANCE_5,DEF_AXIS
+MA384,MsT0201,AXIS_INSTANCE_6,DEF_AXIS
+MA448,MsG0101,AXIS_INSTANCE_7,DEF_AXIS
+MA512,MsT0401,AXIS_INSTANCE_8,DEF_AXIS
+MA576,MsT0402,AXIS_INSTANCE_9,DEF_AXIS
+MA640,,AXIS_INSTANCE_10,DEF_AXIS
+MA704,,AXIS_INSTANCE_11,DEF_AXIS
+MA768,,AXIS_INSTANCE_12,DEF_AXIS
+MA832,,AXIS_INSTANCE_13,DEF_AXIS
+MA896,,AXIS_INSTANCE_14,DEF_AXIS
+MA960,,AXIS_INSTANCE_15,DEF_AXIS
 MA13104,block head,,
 MA131072,manual control communication channel,MANUAL_CONTROL_CHANNEL,DEF_MANUAL
 MA131136,manual command block ,MANUAL_BLOCK,DEF_COMMAND_BASE
@@ -356,7 +371,7 @@ MA73472,_,COMMAND_124,DEF_COMMAND_BASE
 MA73536,_,COMMAND_125,DEF_COMMAND_BASE
 MA73600,_,COMMAND_126,DEF_COMMAND_BASE
 MA73664,_,COMMAND_127,DEF_COMMAND_BASE
-MB000000,Integration reset,,
+MB00008F,"Trigger OB0F,Alarm clear, and auto reset after some cycle",,
 MB1310720,manual mode requiring,,
 MB1310721,"1:running , 0:idle",,
 MB1310750,enable manual step control,,
@@ -383,6 +398,10 @@ MB1966138,temp condition 1,,
 MB1966139,temp condition 2,,
 MB196613A,temp condition 3,,
 MB196613B,temp condition 4,,
+MB196613C,temp condition 5,,
+MB196613D,temp condition 6,,
+MB196613E,temp condition 7,,
+MB196613F,temp condition 8,,
 MB196692,working signal,,
 MB1966920,"000,working",,
 MB196692E,"014,working",,
@@ -497,6 +516,12 @@ MB719460,indicate whether parameters had been setted,,
 MB719461,reset position reference afted moved,,
 MB720740,indicate whether parameters had been setted,,
 MB720741,reset position reference afted moved,,
+ML00004,"IL2,WARNING",,
+ML00006,"IL4,ALARM",,
+ML00018,in 0.001mm,,
+ML00020,in 0.001mm,,
+ML00022,in 0.001mm/sec,,
+ML00024,in 0.001mm/sec,,
 ML131074,position reference,,
 ML131076,postion feedback,,
 ML131078,speed feedback,,
@@ -504,6 +529,8 @@ ML131138,unit/seconds,,
 ML131140,in milliseconds,,
 ML131142,in milliseconds,,
 ML131144,in 0.01%,,
+ML196636,Axis alarm,,
+ML196638,Axis warn,,
 ML196688,"global unit id , used to perform simaltanouse moving",,
 ML196690,whether this location linked with some slave,,
 ML196692,the slave working signal,,
@@ -549,18 +576,12 @@ ML72068,in milliseconds,,
 ML72070,in milliseconds,,
 ML72072,in 0.01%,,
 ML98322,global unit id,,
-MW00000,Relay I/O,,
-MW00001,P gain,,
-MW00002,Integration adjustment gain,,
-MW00003,Integration time,,
-MW00004,Upper integration limit,,
-MW00005,Lower integration limit,,
-MW00006,Upper PI limit,,
-MW00007,Lower PI limit,,
-MW00008,PI output dead band,,
-MW00009,PI output,,
-MW00010,I offset,,
-MW00011,I remainder,,
+MW00000,"IW0,Ready/Servo on",,
+MW00001,"IW9,Command executor status",,
+MW00002,"IWC,Position control loop status",,
+MW00009,Alarm clear reset timer,,
+MW00016,access code for specific axis,,
+MW00017,"0:VIRTUAL,1:MIII,2:PULSE",,
 MW13104,block head,,
 MW131073,the axis currently monitoring,,
 MW131074,"alarm code , 0 : no alarm",,
@@ -586,12 +607,12 @@ MW131333,how many sensors used to check B status,,
 MW196608,parent's assembly id,,
 MW196609,current state,,
 MW196610,"alarm code , 0: No error",,
+MW196611,control word,,
 MW196612,next state going to execute,,
 MW196613,transition control bits,,
 MW196614,the linked index of material-location to first slave,,
 MW196615,how many material this indexer hold,,
-MW196627,cylinder count,,
-MW196628,signal count,,
+MW196636,ERROR CODE,,
 MW196704,the command block index to perform physical shifting,,
 MW196736,parent's assembly id,,
 MW196737,current state,,
