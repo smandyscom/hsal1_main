@@ -21,6 +21,7 @@ CW00105,empty command,,
 CW00200,block command execution,,
 CW00201,DB->PLC,,
 CW00202,PLC->DB,,
+CW00204,axis operation execution,,
 CW00300,update header only,,
 CW00301,update whole block,,
 CW00302,require a new id,,
@@ -127,27 +128,27 @@ IB0805F,CioO1,,
 IB0C408,CioO2,,
 IB0C40A,VsK0101,,
 IB0C40C,CioO1,,
-MA0,MsA0101,AXIS_INSTANCE_0,DEF_AXIS
-MA64,MsG0501,AXIS_INSTANCE_1,DEF_AXIS
-MA128,MsG0401,AXIS_INSTANCE_2,DEF_AXIS
-MA192,MsG0402,AXIS_INSTANCE_3,DEF_AXIS
-MA256,MsT0301,AXIS_INSTANCE_4,DEF_AXIS
-MA320,MsT0302,AXIS_INSTANCE_5,DEF_AXIS
-MA384,MsT0201,AXIS_INSTANCE_6,DEF_AXIS
-MA448,MsG0101,AXIS_INSTANCE_7,DEF_AXIS
-MA512,MsT0401,AXIS_INSTANCE_8,DEF_AXIS
-MA576,MsT0402,AXIS_INSTANCE_9,DEF_AXIS
-MA640,,AXIS_INSTANCE_10,DEF_AXIS
-MA704,,AXIS_INSTANCE_11,DEF_AXIS
-MA768,,AXIS_INSTANCE_12,DEF_AXIS
-MA832,,AXIS_INSTANCE_13,DEF_AXIS
-MA896,,AXIS_INSTANCE_14,DEF_AXIS
-MA960,,AXIS_INSTANCE_15,DEF_AXIS
+MA00000,MsA0101,AXIS_INSTANCE_0,DEF_AXIS
+MA00064,MsG0501,AXIS_INSTANCE_1,DEF_AXIS
+MA00128,MsG0401,AXIS_INSTANCE_2,DEF_AXIS
+MA00192,MsG0402,AXIS_INSTANCE_3,DEF_AXIS
+MA00256,MsT0301,AXIS_INSTANCE_4,DEF_AXIS
+MA00320,MsT0302,AXIS_INSTANCE_5,DEF_AXIS
+MA00384,MsT0201,AXIS_INSTANCE_6,DEF_AXIS
+MA00448,MsG0101,AXIS_INSTANCE_7,DEF_AXIS
+MA00512,MsT0401,AXIS_INSTANCE_8,DEF_AXIS
+MA00576,MsT0402,AXIS_INSTANCE_9,DEF_AXIS
+MA00640,,AXIS_INSTANCE_10,DEF_AXIS
+MA00704,,AXIS_INSTANCE_11,DEF_AXIS
+MA00768,,AXIS_INSTANCE_12,DEF_AXIS
+MA00832,,AXIS_INSTANCE_13,DEF_AXIS
+MA00896,,AXIS_INSTANCE_14,DEF_AXIS
+MA00960,,AXIS_INSTANCE_15,DEF_AXIS
 MA13104,block head,,
 MA131072,manual control communication channel,MANUAL_CONTROL_CHANNEL,DEF_MANUAL
-MA131136,manual command block ,MANUAL_BLOCK,DEF_COMMAND_BASE
-MA131328,io monitor override area,IO_MONITOR_OVERRIDE,CYL_CONTEXT
-MA196608,Root unit,W_UNIT_0,DEF_UNIT_BASE
+MA131136,manual data block ,DATA_BLOCK,DEF_CYL
+MA131328,io monitor override area,IO_MONITOR_OVERRIDE,DEF_COMMAND_BASE
+MA196608,Root unit,W_UNIT_0,DEF_UNIT_CONTROLLER
 MA196672,main indexer,W_UNIT_1,DEF_UNIT_INDEXER_MASTER
 MA196736,"000 , input",W_UNIT_2,DEF_UNIT_BASE
 MA196800,"001 , housing inspection",W_UNIT_3,DEF_UNIT_BASE
@@ -195,38 +196,38 @@ MA230912,material location 12,MATERIAL_LOC_12,DEF_MATERIAL
 MA231040,material location 13,MATERIAL_LOC_13,DEF_MATERIAL
 MA231168,"material location 14 , output",MATERIAL_LOC_14,DEF_MATERIAL
 MA231296,"material location 15 , on robot",MATERIAL_LOC_15,DEF_MATERIAL
-MA32768,"CyA0101,Positioner",CYL_INSTANCE_0,CYL_CONTEXT
-MA32800,"CyE0101,Connector fixture",CYL_INSTANCE_1,CYL_CONTEXT
-MA32832,"CyE0201,Clamper releasing",CYL_INSTANCE_2,CYL_CONTEXT
-MA32864,"CyG0201,PLUG-IN",CYL_INSTANCE_3,CYL_CONTEXT
-MA32896,"CyG0301,PLUG-IN",CYL_INSTANCE_4,CYL_CONTEXT
-MA32928,"CyT0201,Connector Clamper A",CYL_INSTANCE_5,CYL_CONTEXT
-MA32960,"CyT0202,Connector Clamper B",CYL_INSTANCE_6,CYL_CONTEXT
-MA32992,"CyT0203,Connector transporting",CYL_INSTANCE_7,CYL_CONTEXT
-MA33024,"CyT0204,Cable clamper A",CYL_INSTANCE_8,CYL_CONTEXT
-MA33056,"CyT0205,Cable clamper B",CYL_INSTANCE_9,CYL_CONTEXT
-MA33088,"CyT0301,Swing test press A",CYL_INSTANCE_10,CYL_CONTEXT
-MA33120,"CyT0302,Swing test press B",CYL_INSTANCE_11,CYL_CONTEXT
-MA33152,"CyT0303,Connector holder A (vertical",CYL_INSTANCE_12,CYL_CONTEXT
-MA33184,"CyT0304,Connector holder B (vertical",CYL_INSTANCE_13,CYL_CONTEXT
-MA33216,"CyT0305,Cable holder A",CYL_INSTANCE_14,CYL_CONTEXT
-MA33248,"CyT0306,Cable holder B",CYL_INSTANCE_15,CYL_CONTEXT
-MA33280,"CyT0307,Connector holder A",CYL_INSTANCE_16,CYL_CONTEXT
-MA33312,"CyT0308,Connector holder B",CYL_INSTANCE_17,CYL_CONTEXT
-MA33344,"CyT0401,Connector clamper A",CYL_INSTANCE_18,CYL_CONTEXT
-MA33376,"CyT0402,Connector clamper B",CYL_INSTANCE_19,CYL_CONTEXT
-MA33408,"CyT0403,Connector rotate",CYL_INSTANCE_20,CYL_CONTEXT
-MA33440,,CYL_INSTANCE_21,CYL_CONTEXT
-MA33472,,CYL_INSTANCE_22,CYL_CONTEXT
-MA33504,,CYL_INSTANCE_23,CYL_CONTEXT
-MA33536,,CYL_INSTANCE_24,CYL_CONTEXT
-MA33568,,CYL_INSTANCE_25,CYL_CONTEXT
-MA33600,,CYL_INSTANCE_26,CYL_CONTEXT
-MA33632,,CYL_INSTANCE_27,CYL_CONTEXT
-MA33664,,CYL_INSTANCE_28,CYL_CONTEXT
-MA33696,,CYL_INSTANCE_29,CYL_CONTEXT
-MA33728,,CYL_INSTANCE_30,CYL_CONTEXT
-MA33760,,CYL_INSTANCE_31,CYL_CONTEXT
+MA32768,"CyA0101,Positioner",CYL_INSTANCE_0,DEF_CYL
+MA32800,"CyE0101,Connector fixture",CYL_INSTANCE_1,DEF_CYL
+MA32832,"CyE0201,Clamper releasing",CYL_INSTANCE_2,DEF_CYL
+MA32864,"CyG0201,PLUG-IN",CYL_INSTANCE_3,DEF_CYL
+MA32896,"CyG0301,PLUG-IN",CYL_INSTANCE_4,DEF_CYL
+MA32928,"CyT0201,Connector Clamper A",CYL_INSTANCE_5,DEF_CYL
+MA32960,"CyT0202,Connector Clamper B",CYL_INSTANCE_6,DEF_CYL
+MA32992,"CyT0203,Connector transporting",CYL_INSTANCE_7,DEF_CYL
+MA33024,"CyT0204,Cable clamper A",CYL_INSTANCE_8,DEF_CYL
+MA33056,"CyT0205,Cable clamper B",CYL_INSTANCE_9,DEF_CYL
+MA33088,"CyT0301,Swing test press A",CYL_INSTANCE_10,DEF_CYL
+MA33120,"CyT0302,Swing test press B",CYL_INSTANCE_11,DEF_CYL
+MA33152,"CyT0303,Connector holder A (vertical",CYL_INSTANCE_12,DEF_CYL
+MA33184,"CyT0304,Connector holder B (vertical",CYL_INSTANCE_13,DEF_CYL
+MA33216,"CyT0305,Cable holder A",CYL_INSTANCE_14,DEF_CYL
+MA33248,"CyT0306,Cable holder B",CYL_INSTANCE_15,DEF_CYL
+MA33280,"CyT0307,Connector holder A",CYL_INSTANCE_16,DEF_CYL
+MA33312,"CyT0308,Connector holder B",CYL_INSTANCE_17,DEF_CYL
+MA33344,"CyT0401,Connector clamper A",CYL_INSTANCE_18,DEF_CYL
+MA33376,"CyT0402,Connector clamper B",CYL_INSTANCE_19,DEF_CYL
+MA33408,"CyT0403,Connector rotate",CYL_INSTANCE_20,DEF_CYL
+MA33440,,CYL_INSTANCE_21,DEF_CYL
+MA33472,,CYL_INSTANCE_22,DEF_CYL
+MA33504,,CYL_INSTANCE_23,DEF_CYL
+MA33536,,CYL_INSTANCE_24,DEF_CYL
+MA33568,,CYL_INSTANCE_25,DEF_CYL
+MA33600,,CYL_INSTANCE_26,DEF_CYL
+MA33632,,CYL_INSTANCE_27,DEF_CYL
+MA33664,,CYL_INSTANCE_28,DEF_CYL
+MA33696,,CYL_INSTANCE_29,DEF_CYL
+MA33728,,CYL_INSTANCE_30,DEF_CYL
+MA33760,,CYL_INSTANCE_31,DEF_CYL
 MA36864,"ShK0101,Handy",SIGNAL_0,DEF_SIGNAL
 MA36896,"SpE0101,Connector existence A",SIGNAL_1,DEF_SIGNAL
 MA36928,"SpE0102,Connector existence B",SIGNAL_2,DEF_SIGNAL
@@ -381,27 +382,24 @@ MB1311040,HMI,,
 MB1311041,RUN,,
 MB1311048,SERVO_ON,,
 MB1311049,ALARM_CLEAR,,
-MB1311460,indicate whether parameters had been setted,,
-MB1311461,reset position reference afted moved,,
+MB1311360,warning,,
+MB1311361,group A status,,
+MB1311362,group B status,,
+MB1311363,suppress warning,,
+MB1311364,"internal use , timer on bit",,
+MB1311365,operation done,,
 MB1313280,warning,,
 MB1313281,group A status,,
 MB1313282,group B status,,
 MB1313283,suppress warning,,
 MB1313284,"internal use , timer on bit",,
-MB1966110,enable step control,,
-MB1966111,trigger step control,,
-MB1966112,trigger pause,,
-MB1966113,(indexer slave) direct off working signal,,
-MB1966114,backup trigger register status,,
-MB1966130,increment state by 1,,
-MB1966138,temp condition 1,,
-MB1966139,temp condition 2,,
-MB196613A,temp condition 3,,
-MB196613B,temp condition 4,,
-MB196613C,temp condition 5,,
-MB196613D,temp condition 6,,
-MB196613E,temp condition 7,,
-MB196613F,temp condition 8,,
+MB1313380,indicate whether parameters had been setted,,
+MB1313381,reset position reference afted moved,,
+MB1966112,Auto controller pause state,,
+MB1966130,serial transition,,
+MB1966320,",wheter user triggered reset",,
+MB1966400,manually toggle pause trigger,,
+MB1966401,manually toggle init process,,
 MB196692,working signal,,
 MB1966920,"000,working",,
 MB196692E,"014,working",,
@@ -488,15 +486,50 @@ MB327681,group A status,,
 MB327682,group B status,,
 MB327683,suppress warning,,
 MB327684,"internal use , timer on bit",,
+MB327685,operation done,,
 MB328000,warning,,
 MB328001,group A status,,
 MB328002,group B status,,
 MB328003,suppress warning,,
 MB328004,"internal use , timer on bit",,
+MB328005,operation done,,
+MB328320,warning,,
+MB328321,group A status,,
+MB328322,group B status,,
+MB328323,suppress warning,,
+MB328324,"internal use , timer on bit",,
+MB328325,operation done,,
+MB328640,warning,,
+MB328641,group A status,,
+MB328642,group B status,,
+MB328643,suppress warning,,
+MB328644,"internal use , timer on bit",,
+MB328645,operation done,,
+MB328960,warning,,
+MB328961,group A status,,
+MB328962,group B status,,
+MB328963,suppress warning,,
+MB328964,"internal use , timer on bit",,
+MB328965,operation done,,
+MB329280,warning,,
+MB329281,group A status,,
+MB329282,group B status,,
+MB329283,suppress warning,,
+MB329284,"internal use , timer on bit",,
+MB329285,operation done,,
+MB329600,warning,,
+MB329601,group A status,,
+MB329602,group B status,,
+MB329603,suppress warning,,
+MB329604,"internal use , timer on bit",,
+MB329605,operation done,,
+MB329920,Integration reset,,
 MB655460,indicate whether parameters had been setted,,
 MB655461,reset position reference afted moved,,
 MB656740,indicate whether parameters had been setted,,
 MB656741,reset position reference afted moved,,
+MB658020,indicate whether parameters had been setted,,
+MB658021,reset position reference afted moved,,
 MB709220,indicate whether parameters had been setted,,
 MB709221,reset position reference afted moved,,
 MB710560,"1:ABS,0:REL",,
@@ -525,10 +558,11 @@ ML00024,in 0.001mm/sec,,
 ML131074,position reference,,
 ML131076,postion feedback,,
 ML131078,speed feedback,,
-ML131138,unit/seconds,,
-ML131140,in milliseconds,,
-ML131142,in milliseconds,,
-ML131144,in 0.01%,,
+ML131330,unit/seconds,,
+ML131332,in milliseconds,,
+ML131334,in milliseconds,,
+ML131336,in 0.01%,,
+ML196624,"controller id,controller id",,
 ML196636,Axis alarm,,
 ML196638,Axis warn,,
 ML196688,"global unit id , used to perform simaltanouse moving",,
@@ -545,6 +579,10 @@ ML65666,unit/seconds,,
 ML65668,in milliseconds,,
 ML65670,in milliseconds,,
 ML65672,in 0.01%,,
+ML65794,unit/seconds,,
+ML65796,in milliseconds,,
+ML65798,in milliseconds,,
+ML65800,in 0.01%,,
 ML70914,unit/seconds,,
 ML70916,in milliseconds,,
 ML70918,in milliseconds,,
@@ -576,6 +614,7 @@ ML72068,in milliseconds,,
 ML72070,in milliseconds,,
 ML72072,in 0.01%,,
 ML98322,global unit id,,
+MQ196636,",0:No Error",,
 MW00000,"IW0,Ready/Servo on",,
 MW00001,"IW9,Command executor status",,
 MW00002,"IWC,Position control loop status",,
@@ -591,27 +630,32 @@ MW131080,Operation,,
 MW131089,0:PTP (JOG,,
 MW131090,0:AXIS,,
 MW131091,Indicate the bank index going to manipulate,,
-MW131112,axis address,,
+MW131112,categrory,,
 MW131114,Mode,,
 MW131116,Selection,,
 MW131118,Index,,
 MW131120,Index,,
-MW131136,decimal serial ID,,
-MW131137,0:NOP1:POS-I3:ZRET7:FEED64:POS-II65:POS-III,,
-MW131328,"status word , internal/control/monitor included",,
-MW131329,"cached last command, 0:NO_CMD 1:DRIVE_A 2:DRIVE_B",,
+MW131136,"status word , internal/control/monitor included",,
+MW131137,"cached last command, 0:NO_CMD 1:DRIVE_A 2:DRIVE_B",,
+MW131138,last command cached,,
+MW131139,timer working register,,
+MW131152,timer set value,,
+MW131154,how many sensors used to check A status,,
+MW131155,how many sensors used to check B status,,
+MW131328,decimal serial ID,,
+MW131329,0:NOP1:POS-I3:ZRET7:FEED64:POS-II65:POS-III,,
 MW131330,timer set value,,
 MW131331,timer working register,,
 MW131332,how many sensors used to check A status,,
 MW131333,how many sensors used to check B status,,
-MW196608,parent's assembly id,,
-MW196609,current state,,
-MW196610,"alarm code , 0: No error",,
-MW196611,control word,,
-MW196612,next state going to execute,,
-MW196613,transition control bits,,
-MW196614,the linked index of material-location to first slave,,
-MW196615,how many material this indexer hold,,
+MW196612,main state,,
+MW196626,"how much slots this controller held,how much slots this controller held",,
+MW196627,",total cylinder count",,
+MW196628,",total signal count",,
+MW196629,total axis count,,
+MW196630,total unit count,,
+MW196634,",0:Axis,1:Cylinder,2:Unit",,
+MW196635,",which device occurred error",,
 MW196636,ERROR CODE,,
 MW196704,the command block index to perform physical shifting,,
 MW196736,parent's assembly id,,
@@ -672,21 +716,76 @@ MW229633,0x01ACTION_UPDATE_HEADER;0x02ACTION_UPDATE_BLOCK;0x04ACTION_CREATE;0x08
 MW231297,0x01ACTION_UPDATE_HEADER;0x02ACTION_UPDATE_BLOCK;0x04ACTION_CREATE;0x08ACTION_QUERY,,
 MW32768,"status word , internal/control/monitor included",,
 MW32769,"cached last command, 0:NO_CMD 1:DRIVE_A 2:DRIVE_B",,
-MW32770,timer set value,,
+MW32770,last command cached,,
 MW32771,timer working register,,
 MW32772,how many sensors used to check A status,,
 MW32773,how many sensors used to check B status,,
+MW32784,timer set value,,
+MW32786,how many sensors used to check A status,,
+MW32787,how many sensors used to check B status,,
 MW32800,"status word , internal/control/monitor included",,
 MW32801,"cached last command, 0:NO_CMD 1:DRIVE_A 2:DRIVE_B",,
-MW32802,timer set value,,
+MW32802,last command cached,,
 MW32803,timer working register,,
 MW32804,how many sensors used to check A status,,
 MW32805,how many sensors used to check B status,,
+MW32816,timer set value,,
+MW32818,how many sensors used to check A status,,
+MW32819,how many sensors used to check B status,,
+MW32832,"status word , internal/control/monitor included",,
+MW32833,"cached last command, 0:NO_CMD 1:DRIVE_A 2:DRIVE_B",,
+MW32834,last command cached,,
+MW32835,timer working register,,
+MW32848,timer set value,,
+MW32850,how many sensors used to check A status,,
+MW32851,how many sensors used to check B status,,
+MW32864,"status word , internal/control/monitor included",,
+MW32865,"cached last command, 0:NO_CMD 1:DRIVE_A 2:DRIVE_B",,
+MW32866,last command cached,,
+MW32867,timer working register,,
+MW32880,timer set value,,
+MW32882,how many sensors used to check A status,,
+MW32883,how many sensors used to check B status,,
+MW32896,"status word , internal/control/monitor included",,
+MW32897,"cached last command, 0:NO_CMD 1:DRIVE_A 2:DRIVE_B",,
+MW32898,last command cached,,
+MW32899,timer working register,,
+MW32912,timer set value,,
+MW32914,how many sensors used to check A status,,
+MW32915,how many sensors used to check B status,,
+MW32928,"status word , internal/control/monitor included",,
+MW32929,"cached last command, 0:NO_CMD 1:DRIVE_A 2:DRIVE_B",,
+MW32930,last command cached,,
+MW32931,timer working register,,
+MW32944,timer set value,,
+MW32946,how many sensors used to check A status,,
+MW32947,how many sensors used to check B status,,
+MW32960,"status word , internal/control/monitor included",,
+MW32961,"cached last command, 0:NO_CMD 1:DRIVE_A 2:DRIVE_B",,
+MW32962,last command cached,,
+MW32963,timer working register,,
+MW32976,timer set value,,
+MW32978,how many sensors used to check A status,,
+MW32979,how many sensors used to check B status,,
+MW32992,Relay I/O,,
+MW32993,P gain,,
+MW32994,Integration adjustment gain,,
+MW32995,Integration time,,
+MW32996,Upper integration limit,,
+MW32997,Lower integration limit,,
+MW32998,Upper PI limit,,
+MW32999,Lower PI limit,,
+MW33000,PI output dead band,,
+MW33001,PI output,,
+MW33002,I offset,,
+MW33003,I remainder,,
 MW65536,decimal serial ID,,
 MW65537,0:NOP1:POS-I3:ZRET7:FEED64:POS-II65:POS-III,,
 MW65552,travel direction,,
 MW65664,decimal serial ID,,
 MW65665,0:NOP1:POS-I3:ZRET7:FEED64:POS-II65:POS-III,,
+MW65792,decimal serial ID,,
+MW65793,0:NOP1:POS-I3:ZRET7:FEED64:POS-II65:POS-III,,
 MW70912,decimal serial ID,,
 MW70913,0:NOP1:POS-I3:ZRET7:FEED64:POS-II65:POS-III,,
 MW71296,decimal serial ID,,
