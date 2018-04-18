@@ -1,178 +1,246 @@
-DEF_AXIS,,,,,""
-DEF_AXIS,SERVO_ON,Bit,0,0,""
+DEF_AXIS,,,,,
+DEF_AXIS,MONITOR_SERVO_ON,Bit,0,0,
+DEF_AXIS,MONITOR_ALARM_CLEAR,Bit,0,15,"Trigger OB0F,Alarm clear, and auto reset after some cycle"
 DEF_AXIS,MONITOR_OPERATION,Word,0,,"OW0,operation control bits"
-DEF_AXIS,MONITOR_SERVO_ON,Bit,1,0,""
-DEF_AXIS,MONITOR_ALARM_CLEAR,Bit,1,15,"Trigger OB0F,Alarm clear, and auto reset after some cycle"
-DEF_AXIS,CONTROL_OPERATION,Word,1,,""
 DEF_AXIS,POS_COMMAND,Long,2,,"IL0E,TPOS"
-DEF_AXIS,RUN_WITH_SERVO_ON,Bit,4,1,"Running with Servo ON"
-DEF_AXIS,RUN_SERVO_READY,Bit,4,3,"Servo Ready/Alarm"
+DEF_AXIS,RUN_WITH_SERVO_ON,Bit,4,1,Running with Servo ON
+DEF_AXIS,RUN_SERVO_READY,Bit,4,3,Servo Ready/Alarm
 DEF_AXIS,RUN_STATUS,Word,4,,"IW0,Ready/Servo on"
-DEF_AXIS,TMR_ALM_COUNT_VALUE,Word,5,,"Alarm clear reset timer"
+DEF_AXIS,TMR_ALM_COUNT_VALUE,Word,5,,Alarm clear reset timer
 DEF_AXIS,WARNINGS,Long,6,,"IL2,WARNING"
 DEF_AXIS,ALARMS,Long,8,,"IL4,ALARM"
 DEF_AXIS,COMMAND_STATUS,Word,10,,"IW9,Command executor status"
-DEF_AXIS,TMR_FOCUS_COUNT_VALUE,Word,11,,"Focused polling timer"
+DEF_AXIS,TMR_FOCUS_COUNT_VALUE,Word,11,,Focused polling timer
 DEF_AXIS,POS_STATUS,Word,12,,"IWC,Position control loop status"
 DEF_AXIS,POS_FEEDBACK,Long,14,,"IL16,postion feedback (Machine coordiante"
 DEF_AXIS,SPD_FEEDBACK,Long,16,,"IL40,speed feedback"
 DEF_AXIS,TOR_FEEDBACK,Long,18,,"IL42,torque feedback"
 DEF_AXIS,MON_FOCUSED,Bit,20,0,"when focused , start polling POS/SPD/TOR"
-DEF_AXIS,MON_CONTROL_WORD,Word,20,,""
-DEF_AXIS,OPERATION_SERVO_ON,Bit,24,0,""
-DEF_AXIS,OPERATION_ALARM_CLEAR,Bit,24,15,""
-DEF_AXIS,OPERATION_OPERATION,Word,24,,""
-DEF_AXIS,ADDRESS,Word,32,,"access code for specific axis"
+DEF_AXIS,MON_CONTROL_WORD,Word,20,,
+DEF_AXIS,OPERATION_SERVO_ON,Bit,24,0,
+DEF_AXIS,OPERATION_ALARM_CLEAR,Bit,24,15,
+DEF_AXIS,OPERATION_OPERATION,Word,24,,
+DEF_AXIS,ADDRESS,Word,32,,access code for specific axis
 DEF_AXIS,AXIS_TYPE,Word,33,,"0:VIRTUAL,1:MIII,2:PULSE"
-DEF_AXIS,LIMIT_PLUS,Long,34,,"in 0.001mm"
-DEF_AXIS,LIMIT_MINUS,Long,36,,"in 0.001mm"
-DEF_AXIS,SPEED_MAX,Long,38,,"in 0.001mm/sec"
-DEF_AXIS,POS_TOLERANCE,Long,40,,"in 0.001mm/sec"
-DEF_COMMAND_BASE,,,,,""
-DEF_COMMAND_BASE,AXIS_ID,Word,0,,"decimal serial ID"
-DEF_COMMAND_BASE,COMMAND_TYPE,Word,1,,"0:NOP1:POS-I3:ZRET7:FEED64:POS-II65:POS-III"
-DEF_COMMAND_BASE,SPD,Long,2,,"unit/seconds"
-DEF_COMMAND_BASE,ACC_T,Long,4,,"in milliseconds"
-DEF_COMMAND_BASE,DEC_T,Long,6,,"in milliseconds"
-DEF_COMMAND_BASE,TOR_LIMIT,Long,8,,"in 0.01%"
-DEF_COMMAND_BASE,IS_PARA_SETTED,Bit,10,0,"indicate whether parameters had been setted"
-DEF_COMMAND_BASE,IS_RESET_POSITION_REFERENCE,Bit,10,1,"reset position reference afted moved"
-DEF_COMMAND_FEED,,,,,""
-DEF_COMMAND_FEED,FWD_REV,Bit,16,0,"travel direction"
-DEF_COMMAND_POSI,,,,,""
+DEF_AXIS,LIMIT_PLUS,Long,34,,in 0.001mm
+DEF_AXIS,LIMIT_MINUS,Long,36,,in 0.001mm
+DEF_AXIS,SPEED_MAX,Long,38,,in 0.001mm/sec
+DEF_AXIS,POS_TOLERANCE,Long,40,,in 0.001mm/sec
+DEF_COMMAND_BASE,,,,,
+DEF_COMMAND_BASE,AXIS_ID,Word,0,,decimal serial ID
+DEF_COMMAND_BASE,COMMAND_TYPE,Word,1,,0:NOP1:POS-I3:ZRET7:FEED64:POS-II65:POS-III
+DEF_COMMAND_BASE,SPD,Long,2,,unit/seconds
+DEF_COMMAND_BASE,ACC_T,Long,4,,in milliseconds
+DEF_COMMAND_BASE,DEC_T,Long,6,,in milliseconds
+DEF_COMMAND_BASE,TOR_LIMIT,Long,8,,in 0.01%
+DEF_COMMAND_BASE,IS_PARA_SETTED,Bit,10,0,indicate whether parameters had been setted
+DEF_COMMAND_BASE,IS_RESET_POSITION_REFERENCE,Bit,10,1,reset position reference afted moved
+DEF_COMMAND_FEED,,,,,
+DEF_COMMAND_FEED,FWD_REV,Bit,16,0,travel direction
+DEF_COMMAND_POSI,,,,,
 DEF_COMMAND_POSI,ABS_REL,Bit,16,0,"1:ABS,0:REL"
 DEF_COMMAND_POSI,IS_CHECK_REACH,Bit,16,1,"0:check settled only,1:check reached"
-DEF_COMMAND_POSI,COORD,Long,18,,"coordinate"
-DEF_COMMAND_POSI_EX,,,,,"extension of POSI"
-DEF_COMMAND_POSI_EX,IS_ENGAGED_A,Bit,20,0,"engaged A carrier"
-DEF_COMMAND_POSI_EX,IS_ENGAGED_B,Bit,20,1,"engaged B carrier"
+DEF_COMMAND_POSI,COORD,Long,18,,coordinate
+DEF_COMMAND_POSI_EX,,,,,extension of POSI
+DEF_COMMAND_POSI_EX,IS_ENGAGED_A,Bit,20,0,engaged A carrier
+DEF_COMMAND_POSI_EX,IS_ENGAGED_B,Bit,20,1,engaged B carrier
 DEF_COMMAND_POSI_EX,HOME_SWITCH,Bit,20,3,"on:switch A, off:switch B"
-DEF_COMMAND_POSII,,,,,""
+DEF_COMMAND_POSII,,,,,
 DEF_COMMAND_POSII,ABS_REL,Bit,16,0,"1:ABS,0:REL"
 DEF_COMMAND_POSII,SETTLE_REACH,Bit,16,1,"1:SETTLE,0:REACH"
-DEF_COMMAND_POSII,COORD1,Long,18,,"1st axis"
-DEF_COMMAND_POSII,COORD2,Long,20,,"2nd axis"
-DEF_COMMAND_POSIII,,,,,""
+DEF_COMMAND_POSII,COORD1,Long,18,,1st axis
+DEF_COMMAND_POSII,COORD2,Long,20,,2nd axis
+DEF_COMMAND_POSIII,,,,,
 DEF_COMMAND_POSIII,ABS_REL,Bit,16,0,"1:ABS,0:REL"
 DEF_COMMAND_POSIII,SETTLE_REACH,Bit,16,1,"1:SETTLE,0:REACH"
-DEF_COMMAND_POSIII,COORD1,Long,18,,"1st axis"
-DEF_COMMAND_POSIII,COORD2,Long,20,,"2nd axis"
-DEF_COMMAND_POSIII,COORD3,Long,22,,"3rd axis"
-DEF_COMMAND_ZRET,,,,,""
+DEF_COMMAND_POSIII,COORD1,Long,18,,1st axis
+DEF_COMMAND_POSIII,COORD2,Long,20,,2nd axis
+DEF_COMMAND_POSIII,COORD3,Long,22,,3rd axis
+DEF_COMMAND_ZRET,,,,,
 DEF_COMMAND_ZRET,FED_REV,Bit,16,0,"0x0001:FWD,0x0000:REV"
-DEF_COMMAND_ZRET,METHOD,Word,17,,"0:DEC1+C-Pulse"
-DEF_COMMAND_ZRET,OFFSET,Long,18,,"postion offset after reached home"
-DEF_COMMAND_ZRET,SPD_CREEP,Long,20,,"unit/seconds"
-DEF_COMMAND_ZRET,SPD_APPROACH,Long,22,,"unit/seconds"
-DEF_CYL,,,,,"cylinder working register"
-DEF_CYL,MOR_WARN,Bit,0,0,"warning"
-DEF_CYL,MOR_GROUP_A,Bit,0,1,"group A status"
-DEF_CYL,MOR_GROUP_B,Bit,0,2,"group B status"
-DEF_CYL,CTL_SUPPRESS,Bit,0,3,"suppress warning"
+DEF_COMMAND_ZRET,METHOD,Word,17,,0:DEC1+C-Pulse
+DEF_COMMAND_ZRET,OFFSET,Long,18,,postion offset after reached home
+DEF_COMMAND_ZRET,SPD_CREEP,Long,20,,unit/seconds
+DEF_COMMAND_ZRET,SPD_APPROACH,Long,22,,unit/seconds
+DEF_CYL,,,,,cylinder working register
+DEF_CYL,MOR_WARN,Bit,0,0,warning
+DEF_CYL,MOR_GROUP_A,Bit,0,1,group A status
+DEF_CYL,MOR_GROUP_B,Bit,0,2,group B status
+DEF_CYL,CTL_SUPPRESS,Bit,0,3,suppress warning
 DEF_CYL,INT_TMR_ON,Bit,0,4,"internal use , timer on bit"
-DEF_CYL,MOR_DONE,Bit,0,5,"operation done"
+DEF_CYL,MOR_DONE,Bit,0,5,operation done
 DEF_CYL,STATUS_WORD,Word,0,,"status word , internal/control/monitor included"
 DEF_CYL,COMMAND_CACHED,Word,1,,"cached last command, 0:NO_CMD 1:DRIVE_A 2:DRIVE_B"
-DEF_CYL,COMMAND_LAST,Word,2,,"last command cached"
-DEF_CYL,TMR_COUNT_VALUE,Word,3,,"timer working register"
-DEF_CYL,TMR_SET_VALUE,Word,16,,"timer set value"
-DEF_CYL,A_SENSOR_USED_COUNT,Word,18,,"how many sensors used to check A status"
-DEF_CYL,B_SENSOR_USED_COUNT,Word,19,,"how many sensors used to check B status"
-DEF_CYL,ACT_A_1,Word,20,,""
-DEF_CYL,ACT_A_2,Word,21,,""
-DEF_CYL,ACT_B_1,Word,22,,""
-DEF_CYL,ACT_B_2,Word,23,,""
-DEF_CYL,SENSOR_A_1,Word,24,,""
-DEF_CYL,SENSOR_A_2,Word,25,,""
-DEF_CYL,SENSOR_A_3,Word,26,,""
-DEF_CYL,SENSOR_A_4,Word,27,,""
-DEF_CYL,SENSOR_B_1,Word,28,,""
-DEF_CYL,SENSOR_B_2,Word,29,,""
-DEF_CYL,SENSOR_B_3,Word,30,,""
-DEF_CYL,SENSOR_B_4,Word,31,,""
-DEF_MANUAL,,,,,""
-DEF_MANUAL,ENGAGED_PLC,Bit,0,0,"manual mode requiring"
+DEF_CYL,COMMAND_LAST,Word,2,,last command cached
+DEF_CYL,TMR_COUNT_VALUE,Word,3,,timer working register
+DEF_CYL,TMR_SET_VALUE,Word,16,,timer set value
+DEF_CYL,A_SENSOR_USED_COUNT,Word,18,,how many sensors used to check A status
+DEF_CYL,B_SENSOR_USED_COUNT,Word,19,,how many sensors used to check B status
+DEF_CYL,ACT_A_1,Word,20,,
+DEF_CYL,ACT_A_2,Word,21,,
+DEF_CYL,ACT_B_1,Word,22,,
+DEF_CYL,ACT_B_2,Word,23,,
+DEF_CYL,SENSOR_A_1,Word,24,,
+DEF_CYL,SENSOR_A_2,Word,25,,
+DEF_CYL,SENSOR_A_3,Word,26,,
+DEF_CYL,SENSOR_A_4,Word,27,,
+DEF_CYL,SENSOR_B_1,Word,28,,
+DEF_CYL,SENSOR_B_2,Word,29,,
+DEF_CYL,SENSOR_B_3,Word,30,,
+DEF_CYL,SENSOR_B_4,Word,31,,
+DEF_MANUAL,,,,,
+DEF_MANUAL,ENGAGED_PLC,Bit,0,0,manual mode requiring
 DEF_MANUAL,DONE,Bit,0,1,"1:running , 0:idle"
-DEF_MANUAL,STATUS_WORD,Word,0,,""
-DEF_MANUAL,ENGAGED_HMI,Bit,32,0,"manual mode engaged"
+DEF_MANUAL,STATUS_WORD,Word,0,,
+DEF_MANUAL,ENGAGED_HMI,Bit,32,0,manual mode engaged
 DEF_MANUAL,RUN,Bit,32,1,"1:engaged , 0:unengaged or waiting"
-DEF_MANUAL,MON_CATEGRORY,Word,40,,"the device catelog"
-DEF_MANUAL,MON_DEVICE_INDEX,Word,41,,"the device currently monitoring"
-DEF_MANUAL,COMMIT_MODE,Word,42,,"0:BLOCK_COMMAND;15:DOWNLOAD(PLC<;16:UPLOAD(PLC->"
-DEF_MANUAL,COMMIT_SELECTION,Word,44,,"0:AXIS;1:CYL;2:COMMAND_BLOCK"
-DEF_MANUAL,COMMIT_INDEX,Word,46,,"Indicate the bank index going to manipulate"
-DEF_MATERIAL,,,,,""
-DEF_MATERIAL,PLC_ENGAGED,Bit,0,0,""
-DEF_MATERIAL,ACT,Bit,0,1,""
-DEF_MATERIAL,IS_VALID,Bit,0,2,"whether existed in corresponding location"
-DEF_MATERIAL,WORD_OUT,Word,0,,""
-DEF_MATERIAL,SYNC_ACTION,Word,1,,"0x01ACTION_UPDATE_HEADER;0x02ACTION_UPDATE_BLOCK;0x04ACTION_CREATE;0x08ACTION_QUERY"
-DEF_MATERIAL,HMI_ENGAGED,Bit,8,0,""
-DEF_MATERIAL,DONE,Bit,8,1,""
-DEF_MATERIAL,WORD_IN,Word,8,,""
-DEF_MATERIAL,MATERIAL_ID,Long,16,,""
-DEF_MATERIAL,WILD_HEAD,Word,20,,""
-DEF_MATERIAL,WILD_END,Word,127,,""
-DEF_MATERIAL_EX,,,,,"material block extenstion fields"
-DEF_MATERIAL_EX,OUTPUT_BIN_NUM,Word,20,,"which output bin going to put"
-DEF_SIGNAL,,,,,""
-DEF_SIGNAL,SIGNAL_ADDRESS,Word,0,,"input register restricted"
-DEF_SIGNAL,WIDTH_ON_SET,Word,1,,"on timer set value"
-DEF_SIGNAL,WIDTH_OFF_SET,Word,2,,"off timer set value"
-DEF_SIGNAL,WIDTH_ON_COUNT,Word,3,,"on timer count value"
-DEF_SIGNAL,WIDTH_OFF_COUNT,Word,4,,"off timer count value"
-DEF_SIGNAL,DEBOUNCED_ON,Bit,5,0,"output bit of on timer"
-DEF_SIGNAL,DEBOUNCED_OFF,Bit,5,1,"output bit of off timer"
-DEF_SIGNAL,RAW,Bit,5,4,"raw signal status"
-DEF_SIGNAL,WORD_OUT,Word,5,,"status output"
-DEF_UNIT_BASE,,,,,""
-DEF_UNIT_BASE,LUID_PARENT,Word,0,,"parent's assembly id"
-DEF_UNIT_BASE,STATE,Word,1,,"current state"
+DEF_MANUAL,MON_CATEGRORY,Word,40,,the device catelog
+DEF_MANUAL,MON_DEVICE_INDEX,Word,41,,the device currently monitoring
+DEF_MANUAL,COMMIT_MODE,Word,42,,0:BLOCK_COMMAND;15:DOWNLOAD(PLC<;16:UPLOAD(PLC->
+DEF_MANUAL,COMMIT_SELECTION,Word,44,,0:AXIS;1:CYL;2:COMMAND_BLOCK
+DEF_MANUAL,COMMIT_INDEX,Word,46,,Indicate the bank index going to manipulate
+DEF_MATERIAL,,,,,
+DEF_MATERIAL,PLC_ENGAGED,Bit,0,0,
+DEF_MATERIAL,ACT,Bit,0,1,
+DEF_MATERIAL,IS_VALID,Bit,0,2,whether existed in corresponding location
+DEF_MATERIAL,WORD_OUT,Word,0,,
+DEF_MATERIAL,SYNC_ACTION,Word,1,,0x01ACTION_UPDATE_HEADER;0x02ACTION_UPDATE_BLOCK;0x04ACTION_CREATE;0x08ACTION_QUERY
+DEF_MATERIAL,HMI_ENGAGED,Bit,8,0,
+DEF_MATERIAL,DONE,Bit,8,1,
+DEF_MATERIAL,WORD_IN,Word,8,,
+DEF_MATERIAL,MATERIAL_ID,Long,16,,
+DEF_MATERIAL,WILD_HEAD,Word,20,,
+DEF_MATERIAL,WILD_END,Word,127,,
+DEF_MATERIAL_EX,,,,,material block extenstion fields
+DEF_MATERIAL_EX,OUTPUT_BIN_NUM,Word,20,,which output bin going to put
+DEF_SIGNAL,,,,,
+DEF_SIGNAL,SIGNAL_ADDRESS,Word,0,,input register restricted
+DEF_SIGNAL,WIDTH_ON_SET,Word,1,,on timer set value
+DEF_SIGNAL,WIDTH_OFF_SET,Word,2,,off timer set value
+DEF_SIGNAL,WIDTH_ON_COUNT,Word,3,,on timer count value
+DEF_SIGNAL,WIDTH_OFF_COUNT,Word,4,,off timer count value
+DEF_SIGNAL,DEBOUNCED_ON,Bit,5,0,output bit of on timer
+DEF_SIGNAL,DEBOUNCED_OFF,Bit,5,1,output bit of off timer
+DEF_SIGNAL,RAW,Bit,5,4,raw signal status
+DEF_SIGNAL,WORD_OUT,Word,5,,status output
+DEF_UNIT_BASE,,,,,
+DEF_UNIT_BASE,LUID_PARENT,Word,0,,parent's assembly id
+DEF_UNIT_BASE,STATE,Word,1,,current state
 DEF_UNIT_BASE,ALARM_CODE,Word,2,,"alarm code , 0: No error"
-DEF_UNIT_BASE,EN_STEP,Bit,3,0,"enable step control"
-DEF_UNIT_BASE,TRIG_STEP,Bit,3,1,"trigger step control"
-DEF_UNIT_BASE,TRIG_PAUSE,Bit,3,2,"trigger pause"
-DEF_UNIT_BASE,IS_BYPASSED,Bit,3,3,"(indexer slave) direct off working signal"
-DEF_UNIT_BASE,TRIG_STEP_LAST,Bit,3,4,"backup trigger register status"
-DEF_UNIT_BASE,CONTROL_WORD,Word,3,,"control word"
-DEF_UNIT_BASE,NEXT_STATE,Word,4,,"next state going to execute"
-DEF_UNIT_BASE,SERIAL_TRANSITION,Bit,5,0,"increment state by 1"
-DEF_UNIT_BASE,TEMP_CONDITION_1,Bit,5,8,"temp condition 1"
-DEF_UNIT_BASE,TEMP_CONDITION_2,Bit,5,9,"temp condition 2"
-DEF_UNIT_BASE,TEMP_CONDITION_3,Bit,5,10,"temp condition 3"
-DEF_UNIT_BASE,TEMP_CONDITION_4,Bit,5,11,"temp condition 4"
-DEF_UNIT_BASE,TEMP_CONDITION_5,Bit,5,12,"temp condition 5"
-DEF_UNIT_BASE,TEMP_CONDITION_6,Bit,5,13,"temp condition 6"
-DEF_UNIT_BASE,TEMP_CONDITION_7,Bit,5,14,"temp condition 7"
-DEF_UNIT_BASE,TEMP_CONDITION_8,Bit,5,15,"temp condition 8"
-DEF_UNIT_BASE,TRANSITION_WORD,Word,5,,"transition control bits"
-DEF_UNIT_BASE,LSID_BASE,Word,6,,"the linked index of material-location to first slave"
-DEF_UNIT_BASE,LSID_COUNT,Word,7,,"how many material this indexer hold"
-DEF_UNIT_BASE,DERIVED_DATA_HEAD,Word,16,,""
-DEF_UNIT_BASE,DERIVED_DATA_END,Word,63,,""
-DEF_UNIT_CONTROLLER,,,,,""
+DEF_UNIT_BASE,EN_STEP,Bit,3,0,enable step control
+DEF_UNIT_BASE,TRIG_STEP,Bit,3,1,trigger step control
+DEF_UNIT_BASE,TRIG_PAUSE,Bit,3,2,trigger pause
+DEF_UNIT_BASE,IS_BYPASSED,Bit,3,3,(indexer slave) direct off working signal
+DEF_UNIT_BASE,TRIG_STEP_LAST,Bit,3,4,backup trigger register status
+DEF_UNIT_BASE,CONTROL_WORD,Word,3,,control word
+DEF_UNIT_BASE,NEXT_STATE,Word,4,,next state going to execute
+DEF_UNIT_BASE,SERIAL_TRANSITION,Bit,5,0,increment state by 1
+DEF_UNIT_BASE,TEMP_CONDITION_1,Bit,5,8,temp condition 1
+DEF_UNIT_BASE,TEMP_CONDITION_2,Bit,5,9,temp condition 2
+DEF_UNIT_BASE,TEMP_CONDITION_3,Bit,5,10,temp condition 3
+DEF_UNIT_BASE,TEMP_CONDITION_4,Bit,5,11,temp condition 4
+DEF_UNIT_BASE,TEMP_CONDITION_5,Bit,5,12,temp condition 5
+DEF_UNIT_BASE,TEMP_CONDITION_6,Bit,5,13,temp condition 6
+DEF_UNIT_BASE,TEMP_CONDITION_7,Bit,5,14,temp condition 7
+DEF_UNIT_BASE,TEMP_CONDITION_8,Bit,5,15,temp condition 8
+DEF_UNIT_BASE,TRANSITION_WORD,Word,5,,transition control bits
+DEF_UNIT_BASE,LSID_BASE,Word,6,,the linked index of material-location to first slave
+DEF_UNIT_BASE,LSID_COUNT,Word,7,,how many material this indexer hold
+DEF_UNIT_BASE,DERIVED_DATA_HEAD,Word,16,,
+DEF_UNIT_BASE,DERIVED_DATA_END,Word,63,,
+DEF_UNIT_CONTROLLER,,,,,
 DEF_UNIT_CONTROLLER,CID,Long,16,,"controller id,controller id"
 DEF_UNIT_CONTROLLER,TOTAL_SLOT_COUNT,Word,18,,"how much slots this controller held,how much slots this controller held"
 DEF_UNIT_CONTROLLER,TOTAL_CYL_COUNT,Word,19,,",total cylinder count"
 DEF_UNIT_CONTROLLER,TOTAL_SIG_COUNT,Word,20,,",total signal count"
-DEF_UNIT_CONTROLLER,TOTAL_AXIS_COUNT,Word,21,,"total axis count"
-DEF_UNIT_CONTROLLER,TOTAL_UNIT_COUNT,Word,22,,"total unit count"
+DEF_UNIT_CONTROLLER,TOTAL_AXIS_COUNT,Word,21,,total axis count
+DEF_UNIT_CONTROLLER,TOTAL_UNIT_COUNT,Word,22,,total unit count
 DEF_UNIT_CONTROLLER,ERROR_RESET_BIT,Bit,24,0,",wheter user triggered reset"
 DEF_UNIT_CONTROLLER,ERROR_CATEGRORY,Word,26,,",0:Axis,1:Cylinder,2:Unit"
 DEF_UNIT_CONTROLLER,ERROR_DEVICE_INDEX,Word,27,,",which device occurred error"
 DEF_UNIT_CONTROLLER,ERROR_CODE,Quad,28,,",0:No Error"
-DEF_UNIT_CONTROLLER,MANUAL_TOGGLE_PAUSE,Bit,32,0,"manually toggle pause trigger"
-DEF_UNIT_CONTROLLER,MANUAL_TOGGLE_INIT,Bit,32,1,"manually toggle init process"
-DEF_UNIT_INDEXER_MASTER,,,,,""
+DEF_UNIT_CONTROLLER,MANUAL_TOGGLE_PAUSE,Bit,32,0,manually toggle pause trigger
+DEF_UNIT_CONTROLLER,MANUAL_TOGGLE_INIT,Bit,32,1,manually toggle init process
+DEF_UNIT_INDEXER_MASTER,,,,,
 DEF_UNIT_INDEXER_MASTER,GUID_UPSTREAM,Long,16,,"global unit id , used to perform simaltanouse moving"
-DEF_UNIT_INDEXER_MASTER,SLAVE_LINKAGE_STATUS,Long,18,,"whether this location linked with some slave"
-DEF_UNIT_INDEXER_MASTER,SLAVE_WORKING_SIGNAL,Long,20,,"the slave working signal"
-DEF_UNIT_INDEXER_MASTER,IS_SYNC_ENGAGED,Bit,22,0,"whether going to sync"
-DEF_UNIT_INDEXER_MASTER,MOTION_BANK_INDEX,Word,32,,"the command block index to perform physical shifting"
-DEF_UNIT_INDEXER_MASTER,MAT_IS_VALID_STATUS,Long,34,,"is valid status for all material slot related to this master"
-DEF_UNIT_INDEXER_MASTER,MAT_IS_VALID_WORKING,Long,36,,"working register for mat sync"
-DEF_UNIT_INDEXER_SLAVE,,,,,""
-DEF_UNIT_INDEXER_SLAVE,GUID_MASTER,Long,16,,""
-PROTOCAL_RECEVIER_SENDER,,,,,""
-PROTOCAL_RECEVIER_SENDER,RECEIVER_READY,Bit,18,0,"receiver ready bit"
-PROTOCAL_RECEVIER_SENDER,SENDER_READY,Bit,19,0,"sender ready bit"
+DEF_UNIT_INDEXER_MASTER,SLAVE_LINKAGE_STATUS,Long,18,,whether this location linked with some slave
+DEF_UNIT_INDEXER_MASTER,SLAVE_WORKING_SIGNAL,Long,20,,the slave working signal
+DEF_UNIT_INDEXER_MASTER,IS_SYNC_ENGAGED,Bit,22,0,whether going to sync
+DEF_UNIT_INDEXER_MASTER,MOTION_BANK_INDEX,Word,32,,the command block index to perform physical shifting
+DEF_UNIT_INDEXER_MASTER,MAT_IS_VALID_STATUS,Long,34,,is valid status for all material slot related to this master
+DEF_UNIT_INDEXER_MASTER,MAT_IS_VALID_WORKING,Long,36,,working register for mat sync
+DEF_UNIT_INDEXER_SLAVE,,,,,
+DEF_UNIT_INDEXER_SLAVE,GUID_MASTER,Long,16,,
+PROTOCAL_RECEVIER_SENDER,,,,,
+PROTOCAL_RECEVIER_SENDER,RECEIVER_READY,Bit,18,0,receiver ready bit
+PROTOCAL_RECEVIER_SENDER,SENDER_READY,Bit,19,0,sender ready bit
+DEF_UNIT_AOI_HS,,,,,
+DEF_UNIT_AOI_HS,MOTION_ONLINE,Bit,0,0,
+DEF_UNIT_AOI_HS,TRIG_REQUEST,Bit,0,1,
+DEF_UNIT_AOI_HS,AOI_ONLINE,Bit,1,0,
+DEF_UNIT_AOI_HS,TRIG_ACK,Bit,1,1,
+DEF_UNIT_AOI_HS,BANK_NO,Word,2,,
+DEF_UNIT_AOI_HS,AOI_DATA0,Long,32,,
+DEF_UNIT_AOI_HS,AOI_DATA1,Long,34,,
+DEF_UNIT_AOI_HS,AOI_DATA2,Long,36,,
+DEF_UNIT_AOI_HS,AOI_DATA3,Long,38,,
+DEF_UNIT_AOI_HS,AOI_DATA4,Long,40,,
+DEF_UNIT_AOI_HS,AOI_DATA5,Long,42,,
+DEF_UNIT_AOI_HS,AOI_DATA6,Long,44,,
+DEF_UNIT_AOI_HS,AOI_DATA7,Long,46,,
+DEF_UNIT_AOI_HS,AOI_DATA8,Long,48,,
+DEF_UNIT_AOI_HS,AOI_DATA9,Long,50,,
+DEF_UNIT_AOI_HS,AOI_DATA10,Long,52,,
+DEF_UNIT_AOI_HS,AOI_DATA11,Long,54,,
+DEF_UNIT_AOI_HS,AOI_DATA12,Long,56,,
+DEF_UNIT_AOI_HS,AOI_DATA13,Long,58,,
+DEF_UNIT_AOI_HS,AOI_DATA14,Long,60,,
+DEF_UNIT_AOI_HS,AOI_DATA15,Long,62,,
+DEF_UNIT_AOI_HS,AOI_DATA16,Long,64,,
+DEF_UNIT_AOI_HS,AOI_DATA17,Long,66,,
+DEF_UNIT_AOI_HS,AOI_DATA18,Long,68,,
+DEF_UNIT_AOI_HS,AOI_DATA19,Long,70,,
+DEF_UNIT_AOI_HS,AOI_DATA20,Long,72,,
+DEF_UNIT_AOI_HS,AOI_DATA21,Long,74,,
+DEF_UNIT_AOI_HS,AOI_DATA22,Long,76,,
+DEF_UNIT_AOI_HS,AOI_DATA23,Long,78,,
+DEF_UNIT_AOI_HS,AOI_DATA24,Long,80,,
+DEF_UNIT_AOI_HS,AOI_DATA25,Long,82,,
+DEF_UNIT_AOI_HS,AOI_DATA26,Long,84,,
+DEF_UNIT_AOI_HS,AOI_DATA27,Long,86,,
+DEF_UNIT_AOI_HS,AOI_DATA28,Long,88,,
+DEF_UNIT_AOI_HS,AOI_DATA29,Long,90,,
+DEF_UNIT_AOI_HS,AOI_DATA30,Long,92,,
+DEF_UNIT_AOI_HS,AOI_DATA31,Long,94,,
+DEF_UNIT_AOI_HS,AOI_DATA32,Long,96,,
+DEF_UNIT_AOI_HS,AOI_DATA33,Long,98,,
+DEF_UNIT_AOI_HS,AOI_DATA34,Long,100,,
+DEF_UNIT_AOI_HS,AOI_DATA35,Long,102,,
+DEF_UNIT_AOI_HS,AOI_DATA36,Long,104,,
+DEF_UNIT_AOI_HS,AOI_DATA37,Long,106,,
+DEF_UNIT_AOI_HS,AOI_DATA38,Long,108,,
+DEF_UNIT_AOI_HS,AOI_DATA39,Long,110,,
+DEF_UNIT_AOI_HS,AOI_DATA40,Long,112,,
+DEF_UNIT_AOI_HS,AOI_DATA41,Long,114,,
+DEF_UNIT_AOI_HS,AOI_DATA42,Long,116,,
+DEF_UNIT_AOI_HS,AOI_DATA43,Long,118,,
+DEF_UNIT_AOI_HS,AOI_DATA44,Long,120,,
+DEF_UNIT_AOI_HS,AOI_DATA45,Long,122,,
+DEF_UNIT_AOI_HS,AOI_DATA46,Long,124,,
+DEF_UNIT_AOI_HS,AOI_DATA47,Long,126,,
+DEF_UNIT_AOI_HS,AOI_DATA48,Long,128,,
+DEF_UNIT_AOI_HS,AOI_DATA49,Long,130,,
+DEF_UNIT_AOI_HS,AOI_DATA50,Long,132,,
+DEF_UNIT_AOI_HS,AOI_DATA51,Long,134,,
+DEF_UNIT_AOI_HS,AOI_DATA52,Long,136,,
+DEF_UNIT_AOI_HS,AOI_DATA53,Long,138,,
+DEF_UNIT_AOI_HS,AOI_DATA54,Long,140,,
+DEF_UNIT_AOI_HS,AOI_DATA55,Long,142,,
+DEF_UNIT_AOI_HS,AOI_DATA56,Long,144,,
+DEF_UNIT_AOI_HS,AOI_DATA57,Long,146,,
+DEF_UNIT_AOI_HS,AOI_DATA58,Long,148,,
+DEF_UNIT_AOI_HS,AOI_DATA59,Long,150,,
+DEF_UNIT_AOI_HS,AOI_DATA60,Long,152,,
+DEF_UNIT_AOI_HS,AOI_DATA61,Long,154,,
+DEF_UNIT_AOI_HS,AOI_DATA62,Long,156,,
+DEF_UNIT_AOI_HS,AOI_DATA63,Long,158,,
