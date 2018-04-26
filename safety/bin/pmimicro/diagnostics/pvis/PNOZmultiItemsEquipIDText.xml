@@ -565,10 +565,10 @@
         <EN_TEXT>Integrated link interface</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_75">
-        <EN_TEXT>H1</EN_TEXT>
+        <EN_TEXT>OSSD1</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_76">
-        <EN_TEXT>H2</EN_TEXT>
+        <EN_TEXT>OSSD2</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_77">
         <EN_TEXT/>
@@ -613,10 +613,10 @@
         <EN_TEXT>SdK0108NC</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_91">
-        <EN_TEXT>OSSD1</EN_TEXT>
+        <EN_TEXT/>
     </TEXT>
     <TEXT id="LOC0001_92">
-        <EN_TEXT>OSSD2</EN_TEXT>
+        <EN_TEXT/>
     </TEXT>
     <TEXT id="LOC0001_93">
         <EN_TEXT>EMG</EN_TEXT>
@@ -650,4 +650,6 @@
     </TEXT>
     <TEXT id="LOC0001_103"/>
     <TEXT id="LOC0001_104"/>
+    <TEXT id="LOC0001_105"/>
+    <TEXT id="LOC0001_106"/>
 </ITEMS_LOCATION_TEXT>

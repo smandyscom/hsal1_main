@@ -610,10 +610,22 @@
         <SOFTWAREBLOCK_TYPE idref="SBTY_E_Stop">0</SOFTWAREBLOCK_TYPE>
         <PARAM>1</PARAM>
     </ITEM>
-    <ITEM id="SBID2" tableindex="1Y2">
+    <ITEM id="SBID4" tableindex="1Y2">
         <LOCATION idref="LOC0001_104"/>
         <LOCDESC idref="LDS0001_62"/>
+        <SOFTWAREBLOCK_TYPE idref="SBTY_E_Stop">0</SOFTWAREBLOCK_TYPE>
+        <PARAM>4</PARAM>
+    </ITEM>
+    <ITEM id="SBID2" tableindex="2Y2">
+        <LOCATION idref="LOC0001_105"/>
+        <LOCDESC idref="LDS0001_63"/>
         <SOFTWAREBLOCK_TYPE idref="SBTY_TwoHand_Button">0</SOFTWAREBLOCK_TYPE>
         <PARAM>2</PARAM>
+    </ITEM>
+    <ITEM id="SBID3" tableindex="3Y2">
+        <LOCATION idref="LOC0001_106"/>
+        <LOCDESC idref="LDS0001_64"/>
+        <SOFTWAREBLOCK_TYPE idref="SBTY_Light_Curtain">0</SOFTWAREBLOCK_TYPE>
+        <PARAM>3</PARAM>
     </ITEM>
 </ITEMS>

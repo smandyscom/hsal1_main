@@ -15,9 +15,7 @@
         <ZH_TEXT>---</ZH_TEXT>
     </TEXT>
     <TEXT id="LDS0001_0"/>
-    <TEXT id="LDS0001_1">
-        <EN_TEXT/>
-    </TEXT>
+    <TEXT id="LDS0001_1"/>
     <TEXT id="LDS0001_2"/>
     <TEXT id="LDS0001_3"/>
     <TEXT id="LDS0001_4"/>
@@ -38,9 +36,7 @@
     <TEXT id="LDS0001_19"/>
     <TEXT id="LDS0001_20"/>
     <TEXT id="LDS0001_21"/>
-    <TEXT id="LDS0001_22">
-        <EN_TEXT/>
-    </TEXT>
+    <TEXT id="LDS0001_22"/>
     <TEXT id="LDS0001_23"/>
     <TEXT id="LDS0001_24"/>
     <TEXT id="LDS0001_25"/>
@@ -137,4 +133,6 @@
     </TEXT>
     <TEXT id="LDS0001_61"/>
     <TEXT id="LDS0001_62"/>
+    <TEXT id="LDS0001_63"/>
+    <TEXT id="LDS0001_64"/>
 </ITEMS_LOCDESC_TEXT>
