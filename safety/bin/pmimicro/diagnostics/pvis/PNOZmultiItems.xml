@@ -616,16 +616,40 @@
         <SOFTWAREBLOCK_TYPE idref="SBTY_E_Stop">0</SOFTWAREBLOCK_TYPE>
         <PARAM>4</PARAM>
     </ITEM>
-    <ITEM id="SBID2" tableindex="2Y2">
+    <ITEM id="SBID3" tableindex="2Y2">
         <LOCATION idref="LOC0001_105"/>
         <LOCDESC idref="LDS0001_63"/>
-        <SOFTWAREBLOCK_TYPE idref="SBTY_TwoHand_Button">0</SOFTWAREBLOCK_TYPE>
-        <PARAM>2</PARAM>
-    </ITEM>
-    <ITEM id="SBID3" tableindex="3Y2">
-        <LOCATION idref="LOC0001_106"/>
-        <LOCDESC idref="LDS0001_64"/>
         <SOFTWAREBLOCK_TYPE idref="SBTY_Light_Curtain">0</SOFTWAREBLOCK_TYPE>
         <PARAM>3</PARAM>
+    </ITEM>
+    <ITEM id="SBID5" tableindex="3Y2">
+        <LOCATION idref="LOC0001_106"/>
+        <LOCDESC idref="LDS0001_64"/>
+        <SOFTWAREBLOCK_TYPE idref="SBTY_Safety_Gate">0</SOFTWAREBLOCK_TYPE>
+        <PARAM>5</PARAM>
+    </ITEM>
+    <ITEM id="SBID9" tableindex="7Y2">
+        <LOCATION idref="LOC0001_107"/>
+        <LOCDESC idref="LDS0001_65"/>
+        <SOFTWAREBLOCK_TYPE idref="SBTY_Safety_Gate">0</SOFTWAREBLOCK_TYPE>
+        <PARAM>9</PARAM>
+    </ITEM>
+    <ITEM id="SBID10" tableindex="8Y2">
+        <LOCATION idref="LOC0001_108"/>
+        <LOCDESC idref="LDS0001_66"/>
+        <SOFTWAREBLOCK_TYPE idref="SBTY_Safety_Gate">0</SOFTWAREBLOCK_TYPE>
+        <PARAM>10</PARAM>
+    </ITEM>
+    <ITEM id="SBID11" tableindex="9Y2">
+        <LOCATION idref="LOC0001_109"/>
+        <LOCDESC idref="LDS0001_67"/>
+        <SOFTWAREBLOCK_TYPE idref="SBTY_Safety_Gate">0</SOFTWAREBLOCK_TYPE>
+        <PARAM>11</PARAM>
+    </ITEM>
+    <ITEM id="SBID12" tableindex="10Y2">
+        <LOCATION idref="LOC0001_110"/>
+        <LOCDESC idref="LDS0001_68"/>
+        <SOFTWAREBLOCK_TYPE idref="SBTY_Safety_Gate">0</SOFTWAREBLOCK_TYPE>
+        <PARAM>12</PARAM>
     </ITEM>
 </ITEMS>

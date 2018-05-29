@@ -577,16 +577,16 @@
         <EN_TEXT/>
     </TEXT>
     <TEXT id="LOC0001_79">
-        <EN_TEXT>CyT0307a1</EN_TEXT>
+        <EN_TEXT>DUMMY</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_80">
-        <EN_TEXT>CyT0307b1</EN_TEXT>
+        <EN_TEXT/>
     </TEXT>
     <TEXT id="LOC0001_81">
-        <EN_TEXT>CyT0308a1</EN_TEXT>
+        <EN_TEXT/>
     </TEXT>
     <TEXT id="LOC0001_82">
-        <EN_TEXT>CyT0308b1</EN_TEXT>
+        <EN_TEXT/>
     </TEXT>
     <TEXT id="LOC0001_83">
         <EN_TEXT>SdK0101NC</EN_TEXT>
@@ -652,4 +652,8 @@
     <TEXT id="LOC0001_104"/>
     <TEXT id="LOC0001_105"/>
     <TEXT id="LOC0001_106"/>
+    <TEXT id="LOC0001_107"/>
+    <TEXT id="LOC0001_108"/>
+    <TEXT id="LOC0001_109"/>
+    <TEXT id="LOC0001_110"/>
 </ITEMS_LOCATION_TEXT>
