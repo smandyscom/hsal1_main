@@ -598,19 +598,19 @@
         <EN_TEXT>SdK0103NC</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_86">
-        <EN_TEXT>SdK0104NC</EN_TEXT>
+        <EN_TEXT/>
     </TEXT>
     <TEXT id="LOC0001_87">
-        <EN_TEXT>SdK0105NC</EN_TEXT>
+        <EN_TEXT/>
     </TEXT>
     <TEXT id="LOC0001_88">
-        <EN_TEXT>SdK0106NC</EN_TEXT>
+        <EN_TEXT/>
     </TEXT>
     <TEXT id="LOC0001_89">
-        <EN_TEXT>SdK0107NC</EN_TEXT>
+        <EN_TEXT/>
     </TEXT>
     <TEXT id="LOC0001_90">
-        <EN_TEXT>SdK0108NC</EN_TEXT>
+        <EN_TEXT/>
     </TEXT>
     <TEXT id="LOC0001_91">
         <EN_TEXT/>
@@ -634,16 +634,16 @@
         <EN_TEXT>SdK0103A1</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_98">
-        <EN_TEXT>SdK0104A1</EN_TEXT>
+        <EN_TEXT>AIR_CHOKE</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_99">
         <EN_TEXT>ScK01Edm</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_100">
-        <EN_TEXT>HWBB</EN_TEXT>
+        <EN_TEXT>HWBB_servo</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_101">
-        <EN_TEXT/>
+        <EN_TEXT>HWBB_indexer</EN_TEXT>
     </TEXT>
     <TEXT id="LOC0001_102">
         <EN_TEXT/>
@@ -652,8 +652,4 @@
     <TEXT id="LOC0001_104"/>
     <TEXT id="LOC0001_105"/>
     <TEXT id="LOC0001_106"/>
-    <TEXT id="LOC0001_107"/>
-    <TEXT id="LOC0001_108"/>
-    <TEXT id="LOC0001_109"/>
-    <TEXT id="LOC0001_110"/>
 </ITEMS_LOCATION_TEXT>
