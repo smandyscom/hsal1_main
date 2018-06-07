@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <MpnozProjectLangSave
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    active-language="en" projectname="safety" crc="5344"
+    active-language="en" projectname="safety" crc="61544"
     version="v10.4.0" isProjectImmutable="false" xsi:type="MpnozProjectLangSave">
     <BaseTypes/>
     <LanguageSet>
@@ -43,12 +43,14 @@
                 <SaveTextEntry type="comm.i0" id="-1"/>
                 <SaveTextEntry type="comm.o6" id="-1"/>
                 <SaveTextEntry type="comm.i1" id="-1"/>
-                <SaveTextEntry type="comm.o8" id="-1"/>
+                <SaveTextEntry type="comm.o7" id="-1"/>
                 <SaveTextEntry type="comm.i2" id="-1"/>
-                <SaveTextEntry type="comm.o9" id="-1"/>
+                <SaveTextEntry type="comm.o8" id="-1"/>
                 <SaveTextEntry type="comm.i3" id="-1"/>
+                <SaveTextEntry type="comm.o9" id="-1"/>
                 <SaveTextEntry type="comm.o11" id="-1"/>
                 <SaveTextEntry type="comm.o10" id="-1"/>
+                <SaveTextEntry type="comm.i16" id="-1"/>
                 <SaveTextEntry type="comm.o13" id="-1"/>
                 <SaveTextEntry type="comm.o12" id="-1"/>
                 <SaveTextEntry type="comm.o15" id="-1"/>
@@ -57,41 +59,33 @@
                 <SaveTextEntry type="base.o1" id="-1"/>
                 <SaveTextEntry type="base.o2" id="-1"/>
                 <SaveTextEntry type="base.o3" id="-1"/>
-                <SaveTextEntry type="base.i11" id="-1"/>
                 <SaveTextEntry type="base.i10" id="-1"/>
                 <SaveTextEntry type="base.IM18" id="-1"/>
-                <SaveTextEntry type="base.i13" id="-1"/>
                 <SaveTextEntry type="base.i4" id="-1"/>
-                <SaveTextEntry type="base.i12" id="-1"/>
                 <SaveTextEntry type="base.IM1" id="-1"/>
-                <SaveTextEntry type="base.i15" id="-1"/>
                 <SaveTextEntry type="base.IM0" id="-1"/>
-                <SaveTextEntry type="base.i14" id="-1"/>
                 <SaveTextEntry type="base.i8" id="-1"/>
                 <SaveTextEntry type="base.i9" id="-1"/>
                 <SaveTextEntry type="base.T1M21" id="-1"/>
                 <SaveTextEntry type="base.T2M22" id="-1"/>
                 <SaveTextEntry type="base.T0M20" id="-1"/>
-                <SaveTextEntry type="ext.o0" id="-1"/>
-                <SaveTextEntry type="ext.o1" id="-1"/>
-                <SaveTextEntry type="ext.o2" id="-1"/>
-                <SaveTextEntry type="ext.o3" id="-1"/>
                 <SaveTextEntry type="ext.i2" id="-1"/>
             </IOLocationDesc>
             <BlockLocationDesc>
                 <BlockLocDescSaveTextEntry x="1" y="0" id="-1"/>
                 <BlockLocDescSaveTextEntry x="1" y="1" id="-1"/>
-                <BlockLocDescSaveTextEntry x="1" y="13" id="-1"/>
+                <BlockLocDescSaveTextEntry x="1" y="15" id="-1"/>
                 <BlockLocDescSaveTextEntry x="1" y="20" id="-1"/>
                 <BlockLocDescSaveTextEntry x="1" y="21" id="-1"/>
                 <BlockLocDescSaveTextEntry x="1" y="22" id="-1"/>
                 <BlockLocDescSaveTextEntry x="2" y="4" id="-1"/>
                 <BlockLocDescSaveTextEntry x="2" y="12" id="-1"/>
+                <BlockLocDescSaveTextEntry x="2" y="16" id="-1"/>
                 <BlockLocDescSaveTextEntry x="2" y="22" id="-1"/>
                 <BlockLocDescSaveTextEntry x="2" y="28" id="-1"/>
-                <BlockLocDescSaveTextEntry x="3" y="12" id="-1"/>
                 <BlockLocDescSaveTextEntry x="3" y="52" id="-1"/>
                 <BlockLocDescSaveTextEntry x="4" y="4" id="-1"/>
+                <BlockLocDescSaveTextEntry x="4" y="12" id="-1"/>
                 <BlockLocDescSaveTextEntry x="4" y="44" id="-1"/>
                 <BlockLocDescSaveTextEntry x="5" y="0" id="-1"/>
                 <BlockLocDescSaveTextEntry x="5" y="36" id="-1"/>
@@ -140,22 +134,28 @@
             <HwIoEntry type="comm.i1" LocationDescKey="-1" EquipmentIdKey="C30003">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
-            <HwIoEntry type="comm.o8" LocationDescKey="-1" EquipmentIdKey="C17468">
+            <HwIoEntry type="comm.o7" LocationDescKey="-1" EquipmentIdKey="C54147">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
             <HwIoEntry type="comm.i2" LocationDescKey="-1" EquipmentIdKey="C75860">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
-            <HwIoEntry type="comm.o9" LocationDescKey="-1" EquipmentIdKey="C23989">
+            <HwIoEntry type="comm.o8" LocationDescKey="-1" EquipmentIdKey="C17468">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
             <HwIoEntry type="comm.i3" LocationDescKey="-1" EquipmentIdKey="C85503">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="comm.o9" LocationDescKey="-1" EquipmentIdKey="C23989">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
             <HwIoEntry type="comm.o11" LocationDescKey="-1" EquipmentIdKey="C89303">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
             <HwIoEntry type="comm.o10" LocationDescKey="-1" EquipmentIdKey="C60931">
+                <ImmutableElement isImmutable="false" testPulse="-1"/>
+            </HwIoEntry>
+            <HwIoEntry type="comm.i16" LocationDescKey="-1" EquipmentIdKey="C26537">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
             <HwIoEntry type="comm.o13" LocationDescKey="-1" EquipmentIdKey="C74713">
@@ -182,34 +182,19 @@
             <HwIoEntry type="base.o3" LocationDescKey="-1" EquipmentIdKey="C72857">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
-            <HwIoEntry type="base.i11" LocationDescKey="-1" EquipmentIdKey="C58698">
-                <ImmutableElement isImmutable="false" testPulse="-1"/>
-            </HwIoEntry>
             <HwIoEntry type="base.i10" LocationDescKey="-1" EquipmentIdKey="C60931">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
             <HwIoEntry type="base.IM18" LocationDescKey="-1" EquipmentIdKey="C55496">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
-            <HwIoEntry type="base.i13" LocationDescKey="-1" EquipmentIdKey="C21027">
-                <ImmutableElement isImmutable="false" testPulse="-1"/>
-            </HwIoEntry>
             <HwIoEntry type="base.i4" LocationDescKey="-1" EquipmentIdKey="C78024">
-                <ImmutableElement isImmutable="false" testPulse="-1"/>
-            </HwIoEntry>
-            <HwIoEntry type="base.i12" LocationDescKey="-1" EquipmentIdKey="C98460">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
             <HwIoEntry type="base.IM1" LocationDescKey="-1" EquipmentIdKey="C77324">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
-            <HwIoEntry type="base.i15" LocationDescKey="-1" EquipmentIdKey="C27507">
-                <ImmutableElement isImmutable="false" testPulse="-1"/>
-            </HwIoEntry>
             <HwIoEntry type="base.IM0" LocationDescKey="-1" EquipmentIdKey="C72925">
-                <ImmutableElement isImmutable="false" testPulse="-1"/>
-            </HwIoEntry>
-            <HwIoEntry type="base.i14" LocationDescKey="-1" EquipmentIdKey="C48949">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
             <HwIoEntry type="base.i8" LocationDescKey="-1" EquipmentIdKey="C17468">
@@ -227,18 +212,6 @@
             <HwIoEntry type="base.T0M20" LocationDescKey="-1" EquipmentIdKey="C10356">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
-            <HwIoEntry type="ext.o0" LocationDescKey="-1" EquipmentIdKey="-1">
-                <ImmutableElement isImmutable="false" testPulse="-1"/>
-            </HwIoEntry>
-            <HwIoEntry type="ext.o1" LocationDescKey="-1" EquipmentIdKey="-1">
-                <ImmutableElement isImmutable="false" testPulse="-1"/>
-            </HwIoEntry>
-            <HwIoEntry type="ext.o2" LocationDescKey="-1" EquipmentIdKey="-1">
-                <ImmutableElement isImmutable="false" testPulse="-1"/>
-            </HwIoEntry>
-            <HwIoEntry type="ext.o3" LocationDescKey="-1" EquipmentIdKey="-1">
-                <ImmutableElement isImmutable="false" testPulse="-1"/>
-            </HwIoEntry>
             <HwIoEntry type="ext.i2" LocationDescKey="-1" EquipmentIdKey="C55496">
                 <ImmutableElement isImmutable="false" testPulse="-1"/>
             </HwIoEntry>
@@ -247,17 +220,18 @@
             <GenericBlocks>
                 <BlockEntry x="1" y="0" LocationDescKey="-1" EquipmentIdKey="-1"/>
                 <BlockEntry x="1" y="1" LocationDescKey="-1" EquipmentIdKey="-1"/>
-                <BlockEntry x="1" y="13" LocationDescKey="-1" EquipmentIdKey="-1"/>
+                <BlockEntry x="1" y="15" LocationDescKey="-1" EquipmentIdKey="-1"/>
                 <BlockEntry x="1" y="20" LocationDescKey="-1" EquipmentIdKey="-1"/>
                 <BlockEntry x="1" y="21" LocationDescKey="-1" EquipmentIdKey="-1"/>
                 <BlockEntry x="1" y="22" LocationDescKey="-1" EquipmentIdKey="-1"/>
                 <BlockEntry x="2" y="4" LocationDescKey="-1" EquipmentIdKey="-1"/>
                 <BlockEntry x="2" y="12" LocationDescKey="-1" EquipmentIdKey="-1"/>
+                <BlockEntry x="2" y="16" LocationDescKey="-1" EquipmentIdKey="-1"/>
                 <BlockEntry x="2" y="22" LocationDescKey="-1" EquipmentIdKey="-1"/>
                 <BlockEntry x="2" y="28" LocationDescKey="-1" EquipmentIdKey="-1"/>
-                <BlockEntry x="3" y="12" LocationDescKey="-1" EquipmentIdKey="-1"/>
                 <BlockEntry x="3" y="52" LocationDescKey="-1" EquipmentIdKey="-1"/>
                 <BlockEntry x="4" y="4" LocationDescKey="-1" EquipmentIdKey="-1"/>
+                <BlockEntry x="4" y="12" LocationDescKey="-1" EquipmentIdKey="-1"/>
                 <BlockEntry x="4" y="44" LocationDescKey="-1" EquipmentIdKey="-1"/>
                 <BlockEntry x="5" y="0" LocationDescKey="-1" EquipmentIdKey="-1"/>
                 <BlockEntry x="5" y="36" LocationDescKey="-1" EquipmentIdKey="-1"/>
