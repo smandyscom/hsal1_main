@@ -1,0 +1,287 @@
+{
+    "type": "table",
+    "database": null,
+    "name": "MAT_DATA_SLOT4",
+    "withoutRowId": true,
+    "ddl": "CREATE TABLE MAT_DATA_SLOT4 (ID INTEGER REFERENCES MAT_DATA_SLOT0 (ID), DATA_0 INTEGER, DATA_1 INTEGER, DATA_2 INTEGER, DATA_3 INTEGER, DATA_4 INTEGER, DATA_5 INTEGER, DATA_6 INTEGER, DATA_7 INTEGER, DATA_8 INTEGER, DATA_9 INTEGER, DATA_10 INTEGER, DATA_11 INTEGER, DATA_12 INTEGER, DATA_13 INTEGER, DATA_14 INTEGER, DATA_15 INTEGER, DATA_16 INTEGER, DATA_17 INTEGER, DATA_18 INTEGER, DATA_19 INTEGER, DATA_20 INTEGER, DATA_21 INTEGER, DATA_22 INTEGER, DATA_23 INTEGER, DATA_24 INTEGER, DATA_25 INTEGER, DATA_26 INTEGER, DATA_27 INTEGER, DATA_28 INTEGER, DATA_29 INTEGER, DATA_30 INTEGER, DATA_31 INTEGER, DATA_32 INTEGER, DATA_33 INTEGER, DATA_34 INTEGER, DATA_35 INTEGER, DATA_36 INTEGER, DATA_37 INTEGER, DATA_38 INTEGER, DATA_39 INTEGER, DATA_40 INTEGER, DATA_41 INTEGER, DATA_42 INTEGER, DATA_43 INTEGER, DATA_44 INTEGER, DATA_45 INTEGER, DATA_46 INTEGER, DATA_47 INTEGER, DATA_48 INTEGER, DATA_49 INTEGER, DATA_50 INTEGER, DATA_51 INTEGER, DATA_52 INTEGER, DATA_53 INTEGER, DATA_54 INTEGER, DATA_55 INTEGER, DATA_56 INTEGER, DATA_57 INTEGER, DATA_58 INTEGER, DATA_59 INTEGER, DATA_60 INTEGER, DATA_61 INTEGER, DATA_62 INTEGER, DATA_63 INTEGER);",
+    "columns": [
+        {
+            "name": "ID",
+            "type": "INTEGER",
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "REFERENCES MAT_DATA_SLOT0 (ID)"
+                }
+            ]
+        },
+        {
+            "name": "DATA_0",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_1",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_2",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_3",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_4",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_5",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_6",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_7",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_8",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_9",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_10",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_11",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_12",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_13",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_14",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_15",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_16",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_17",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_18",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_19",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_20",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_21",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_22",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_23",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_24",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_25",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_26",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_27",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_28",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_29",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_30",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_31",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_32",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_33",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_34",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_35",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_36",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_37",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_38",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_39",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_40",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_41",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_42",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_43",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_44",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_45",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_46",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_47",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_48",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_49",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_50",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_51",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_52",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_53",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_54",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_55",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_56",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_57",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_58",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_59",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_60",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_61",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_62",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_63",
+            "type": "INTEGER"
+        }
+    ],
+    "rows": [
+    ]
+},
+{
+    "type": "trigger",
+    "database": null,
+    "name": "GEN_TOP_BIN",
+    "ddl": "CREATE TRIGGER GEN_TOP_BIN AFTER UPDATE ON MAT_DATA_SLOT4 BEGIN update MAT_DATA_SLOT15\nset DATA_6=(select DATA_0 from MAT_DATA_SLOT4 where ID=new.ID) ==1 AND\n(select DATA_21 from MAT_DATA_SLOT4 where ID=new.ID) ==1,\nDATA_2=(select ID from MAT_CODE_HOUSING where AOI_TOP_CODE=new.DATA_2),\nDATA_4=(select ID from MAT_CODE_HOUSING where AOI_TOP_CODE=new.DATA_25)\nwhere ID=new.ID; END;",
+    "timing": "AFTER",
+    "action": "UPDATE",
+    "table": "MAT_DATA_SLOT4",
+    "code": "update MAT_DATA_SLOT15\nset DATA_6=(select DATA_0 from MAT_DATA_SLOT4 where ID=new.ID) ==1 AND\n(select DATA_21 from MAT_DATA_SLOT4 where ID=new.ID) ==1,\nDATA_2=(select ID from MAT_CODE_HOUSING where AOI_TOP_CODE=new.DATA_2),\nDATA_4=(select ID from MAT_CODE_HOUSING where AOI_TOP_CODE=new.DATA_25)\nwhere ID=new.ID"
+}

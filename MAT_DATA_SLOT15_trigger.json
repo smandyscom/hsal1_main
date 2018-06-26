@@ -1,0 +1,135 @@
+{
+    "type": "table",
+    "database": null,
+    "name": "MAT_DATA_SLOT15",
+    "withoutRowId": true,
+    "ddl": "CREATE TABLE MAT_DATA_SLOT15 (ID INTEGER REFERENCES MAT_DATA_SLOT0 (ID), DATA_0 INTEGER, DATA_1 INTEGER, DATA_2 INTEGER, DATA_3 INTEGER, DATA_4 INTEGER, DATA_5 INTEGER, DATA_6 INTEGER, DATA_7 INTEGER, DATA_8 INTEGER, DATA_9 INTEGER, DATA_10 INTEGER, DATA_11 INTEGER, DATA_12 INTEGER, DATA_13 INTEGER, DATA_14 INTEGER, DATA_15 INTEGER, DATA_16 INTEGER, DATA_17 INTEGER, DATA_18 INTEGER, DATA_19 INTEGER, DATA_20 INTEGER);",
+    "columns": [
+        {
+            "name": "ID",
+            "type": "INTEGER",
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "REFERENCES MAT_DATA_SLOT0 (ID)"
+                }
+            ]
+        },
+        {
+            "name": "DATA_0",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_1",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_2",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_3",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_4",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_5",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_6",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_7",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_8",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_9",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_10",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_11",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_12",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_13",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_14",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_15",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_16",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_17",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_18",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_19",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_20",
+            "type": "INTEGER"
+        }
+    ],
+    "rows": [
+    ]
+},
+{
+    "type": "trigger",
+    "database": null,
+    "name": "SYNC_DELETE",
+    "ddl": "CREATE TRIGGER SYNC_DELETE AFTER DELETE ON MAT_DATA_SLOT15 BEGIN DELETE FROM MAT_DATA_SLOT0 WHERE ID = old.ID; DELETE FROM MAT_DATA_SLOT1 WHERE ID = old.ID; DELETE FROM MAT_DATA_SLOT3 WHERE ID = old.ID; DELETE FROM MAT_DATA_SLOT4 WHERE ID = old.ID; DELETE FROM MAT_DATA_SLOT8 WHERE ID = old.ID; END;",
+    "timing": "AFTER",
+    "action": "DELETE",
+    "table": "MAT_DATA_SLOT15",
+    "code": "DELETE FROM MAT_DATA_SLOT0 WHERE ID = old.ID\nDELETE FROM MAT_DATA_SLOT1 WHERE ID = old.ID\nDELETE FROM MAT_DATA_SLOT3 WHERE ID = old.ID\nDELETE FROM MAT_DATA_SLOT4 WHERE ID = old.ID\nDELETE FROM MAT_DATA_SLOT8 WHERE ID = old.ID"
+},
+{
+    "type": "trigger",
+    "database": null,
+    "name": "GEN_BIN",
+    "ddl": "CREATE TRIGGER GEN_BIN AFTER UPDATE OF DATA_5, DATA_6, DATA_7, DATA_8, DATA_9, DATA_10, DATA_11, DATA_12 ON MAT_DATA_SLOT15 BEGIN UPDATE MAT_DATA_SLOT15 SET DATA_0 = (DATA_5==1 AND DATA_6==1 AND DATA_7==1 AND DATA_8==1 AND DATA_9==1 AND DATA_10==1 AND DATA_11==1 AND DATA_12==1) WHERE id = new.id; END;",
+    "timing": "AFTER",
+    "action": "UPDATE OF",
+    "table": "MAT_DATA_SLOT15",
+    "code": "UPDATE MAT_DATA_SLOT15 SET DATA_0 = (DATA_5==1 AND DATA_6==1 AND DATA_7==1 AND DATA_8==1 AND DATA_9==1 AND DATA_10==1 AND DATA_11==1 AND DATA_12==1) WHERE id = new.id"
+},
+{
+    "type": "trigger",
+    "database": null,
+    "name": "GEN_MATCH",
+    "ddl": "CREATE TRIGGER GEN_MATCH AFTER UPDATE OF DATA_1, DATA_2, DATA_3, DATA_4 ON MAT_DATA_SLOT15 BEGIN update MAT_DATA_SLOT15\nset DATA_9= (DATA_1 == (select DATA_1 from MAT_DATA_SLOT0 where ID=new.ID)),\nDATA_10 = (DATA_2 == (select DATA_2 from MAT_DATA_SLOT0 where ID=new.ID)),\nDATA_11 = (DATA_3 == (select DATA_3 from MAT_DATA_SLOT0 where ID=new.ID)),\nDATA_12 = (DATA_4 == (select DATA_4 from MAT_DATA_SLOT0 where ID=new.ID))\nwhere ID=new.ID; END;",
+    "timing": "AFTER",
+    "action": "UPDATE OF",
+    "table": "MAT_DATA_SLOT15",
+    "code": "update MAT_DATA_SLOT15\nset DATA_9= (DATA_1 == (select DATA_1 from MAT_DATA_SLOT0 where ID=new.ID)),\nDATA_10 = (DATA_2 == (select DATA_2 from MAT_DATA_SLOT0 where ID=new.ID)),\nDATA_11 = (DATA_3 == (select DATA_3 from MAT_DATA_SLOT0 where ID=new.ID)),\nDATA_12 = (DATA_4 == (select DATA_4 from MAT_DATA_SLOT0 where ID=new.ID))\nwhere ID=new.ID"
+}

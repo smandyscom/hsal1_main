@@ -1,0 +1,75 @@
+{
+    "type": "table",
+    "database": null,
+    "name": "MAT_DATA_SLOT3",
+    "withoutRowId": true,
+    "ddl": "CREATE TABLE MAT_DATA_SLOT3 (ID INTEGER REFERENCES MAT_DATA_SLOT0 (ID), DATA_0 INTEGER, DATA_1 INTEGER, DATA_2 INTEGER, DATA_3 INTEGER, DATA_4 INTEGER, DATA_5 INTEGER, DATA_6 INTEGER, DATA_7 INTEGER, DATA_8 INTEGER, DATA_9 INTEGER, DATA_10 INTEGER);",
+    "columns": [
+        {
+            "name": "ID",
+            "type": "INTEGER",
+            "constraints": [
+                {
+                    "type": "FOREIGN KEY",
+                    "definition": "REFERENCES MAT_DATA_SLOT0 (ID)"
+                }
+            ]
+        },
+        {
+            "name": "DATA_0",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_1",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_2",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_3",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_4",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_5",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_6",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_7",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_8",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_9",
+            "type": "INTEGER"
+        },
+        {
+            "name": "DATA_10",
+            "type": "INTEGER"
+        }
+    ],
+    "rows": [
+    ]
+},
+{
+    "type": "trigger",
+    "database": null,
+    "name": "GEN_ET_BIN",
+    "ddl": "CREATE TRIGGER GEN_ET_BIN AFTER UPDATE ON MAT_DATA_SLOT3 BEGIN update MAT_DATA_SLOT15\nset DATA_8=((select DATA_0 from MAT_DATA_SLOT3 where ID=new.ID)==1)\nwhere ID=new.ID; END;",
+    "timing": "AFTER",
+    "action": "UPDATE",
+    "table": "MAT_DATA_SLOT3",
+    "code": "update MAT_DATA_SLOT15\nset DATA_8=((select DATA_0 from MAT_DATA_SLOT3 where ID=new.ID)==1)\nwhere ID=new.ID"
+}

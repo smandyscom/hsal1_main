@@ -1,0 +1,5559 @@
+{
+    "type": "database",
+    "name": "material_hsal1_man",
+    "objects": [
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_AOI_CODE_BOTTOM",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_AOI_CODE_BOTTOM (ID INTEGER PRIMARY KEY, NAME TEXT)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "NAME",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    0,
+                    "A"
+                ],
+                [
+                    1,
+                    "B"
+                ],
+                [
+                    11,
+                    "EJ"
+                ],
+                [
+                    12,
+                    "CG"
+                ],
+                [
+                    13,
+                    "DH"
+                ],
+                [
+                    14,
+                    "FK"
+                ],
+                [
+                    20,
+                    "ERROR"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_AOI_CODE_FRONT",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_AOI_CODE_FRONT (ID INTEGER PRIMARY KEY, NAME TEXT)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "NAME",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    2,
+                    "C2"
+                ],
+                [
+                    4,
+                    "C3"
+                ],
+                [
+                    24,
+                    "C1"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_AOI_CODE_TOP",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_AOI_CODE_TOP (ID INTEGER PRIMARY KEY, NAME TEXT)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "NAME",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    15,
+                    "A-K"
+                ],
+                [
+                    16,
+                    "S"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_CODE_HOUSING",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_CODE_HOUSING (ID INTEGER PRIMARY KEY, NAME TEXT, AOI_TOP_CODE INTEGER REFERENCES MAT_AOI_CODE_TOP (ID))",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "NAME",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "AOI_TOP_CODE",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "FOREIGN KEY",
+                            "definition": "REFERENCES MAT_AOI_CODE_TOP (ID)"
+                        }
+                    ]
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    "A",
+                    15
+                ],
+                [
+                    2,
+                    "B",
+                    16
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_CODE_KEY",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_CODE_KEY (ID INTEGER PRIMARY KEY, NAME TEXT, AOI_BOTTOM_CODE INTEGER REFERENCES MAT_AOI_CODE_BOTTOM (ID), AOI_FRONT_CODE INTEGER REFERENCES MAT_AOI_CODE_FRONT (ID))",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "NAME",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "AOI_BOTTOM_CODE",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "FOREIGN KEY",
+                            "definition": "REFERENCES MAT_AOI_CODE_BOTTOM (ID)"
+                        }
+                    ]
+                },
+                {
+                    "name": "AOI_FRONT_CODE",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "FOREIGN KEY",
+                            "definition": "REFERENCES MAT_AOI_CODE_FRONT (ID)"
+                        }
+                    ]
+                }
+            ],
+            "rows": [
+                [
+                    1,
+                    "A",
+                    0,
+                    24
+                ],
+                [
+                    2,
+                    "B",
+                    1,
+                    2
+                ],
+                [
+                    3,
+                    "C",
+                    12,
+                    4
+                ],
+                [
+                    4,
+                    "D",
+                    13,
+                    24
+                ],
+                [
+                    5,
+                    "E",
+                    11,
+                    4
+                ],
+                [
+                    6,
+                    "F",
+                    14,
+                    2
+                ],
+                [
+                    7,
+                    "G",
+                    12,
+                    24
+                ],
+                [
+                    8,
+                    "H",
+                    13,
+                    2
+                ],
+                [
+                    9,
+                    "I",
+                    20,
+                    4
+                ],
+                [
+                    10,
+                    "J",
+                    11,
+                    24
+                ],
+                [
+                    11,
+                    "K",
+                    14,
+                    2
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_COLOR_QT",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_COLOR_QT (COLOR TEXT PRIMARY KEY, QCOLOR INTEGER)",
+            "columns": [
+                {
+                    "name": "COLOR",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "QCOLOR",
+                    "type": "INTEGER"
+                }
+            ],
+            "rows": [
+                [
+                    "Black",
+                    null
+                ],
+                [
+                    "Gray",
+                    null
+                ],
+                [
+                    "Brown",
+                    null
+                ],
+                [
+                    "Green",
+                    null
+                ],
+                [
+                    "Blue",
+                    null
+                ],
+                [
+                    "Natural",
+                    null
+                ],
+                [
+                    "C.Violet",
+                    null
+                ],
+                [
+                    "BlueGray",
+                    null
+                ],
+                [
+                    "H. Violet",
+                    null
+                ],
+                [
+                    "Beige",
+                    null
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_DATA_SLOT0",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_DATA_SLOT0 (ID INTEGER PRIMARY KEY ASC AUTOINCREMENT, DATA_0 INTEGER, DATA_1 INTEGER, DATA_2 INTEGER, DATA_3 INTEGER, DATA_4 INTEGER)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY ASC AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "DATA_0",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_1",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_2",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_3",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_4",
+                    "type": "INTEGER"
+                }
+            ],
+            "rows": [
+                [
+                    677,
+                    "2018-06-14 03:33:05",
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    678,
+                    "2018-06-14 06:31:50",
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    679,
+                    "2018-06-14 06:31:56",
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    680,
+                    "2018-06-14 06:31:58",
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    681,
+                    "2018-06-14 06:32:15",
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    682,
+                    "2018-06-14 06:32:23",
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    683,
+                    "2018-06-14 06:38:08",
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    684,
+                    "2018-06-14 06:38:11",
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    685,
+                    "2018-06-14 06:38:20",
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_DATA_SLOT1",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_DATA_SLOT1 (ID INTEGER REFERENCES MAT_DATA_SLOT0 (ID), DATA_0 INTEGER, DATA_1 INTEGER, DATA_2 INTEGER, DATA_3 INTEGER, DATA_4 INTEGER, DATA_5 INTEGER, DATA_6 INTEGER, DATA_7 INTEGER, DATA_8 INTEGER, DATA_9 INTEGER, DATA_10 INTEGER, DATA_11 INTEGER, DATA_12 INTEGER, DATA_13 INTEGER, DATA_14 INTEGER, DATA_15 INTEGER, DATA_16 INTEGER, DATA_17 INTEGER, DATA_18 INTEGER, DATA_19 INTEGER, DATA_20 INTEGER, DATA_21 INTEGER, DATA_22 INTEGER, DATA_23 INTEGER, DATA_24 INTEGER, DATA_25 INTEGER, DATA_26 INTEGER, DATA_27 INTEGER, DATA_28 INTEGER, DATA_29 INTEGER, DATA_30 INTEGER, DATA_31 INTEGER)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "FOREIGN KEY",
+                            "definition": "REFERENCES MAT_DATA_SLOT0 (ID)"
+                        }
+                    ]
+                },
+                {
+                    "name": "DATA_0",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_1",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_2",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_3",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_4",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_5",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_6",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_7",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_8",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_9",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_10",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_11",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_12",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_13",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_14",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_15",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_16",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_17",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_18",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_19",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_20",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_21",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_22",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_23",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_24",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_25",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_26",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_27",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_28",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_29",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_30",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_31",
+                    "type": "INTEGER"
+                }
+            ],
+            "rows": [
+                [
+                    677,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    678,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    679,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    680,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    681,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    682,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    683,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    684,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    685,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_DATA_SLOT15",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_DATA_SLOT15 (ID INTEGER REFERENCES MAT_DATA_SLOT0 (ID), DATA_0 INTEGER, DATA_1 INTEGER, DATA_2 INTEGER, DATA_3 INTEGER, DATA_4 INTEGER, DATA_5 INTEGER, DATA_6 INTEGER, DATA_7 INTEGER, DATA_8 INTEGER, DATA_9 INTEGER, DATA_10 INTEGER, DATA_11 INTEGER, DATA_12 INTEGER, DATA_13 INTEGER, DATA_14 INTEGER, DATA_15 INTEGER, DATA_16 INTEGER, DATA_17 INTEGER, DATA_18 INTEGER, DATA_19 INTEGER, DATA_20 INTEGER, DATA_22 INTEGER, DATA_23 INTEGER, DATA_24 INTEGER, DATA_25 INTEGER, DATA_26 INTEGER, DATA_27 INTEGER, DATA_28 INTEGER, DATA_29 INTEGER, DATA_30 INTEGER, DATA_31 INTEGER, DATA_32 INTEGER, DATA_33 INTEGER, DATA_34 INTEGER, DATA_35 INTEGER, DATA_36 INTEGER, DATA_37 INTEGER, DATA_38 INTEGER, DATA_39 INTEGER, DATA_40 INTEGER, DATA_41 INTEGER, DATA_42 INTEGER, DATA_43 INTEGER, DATA_44 INTEGER, DATA_45 INTEGER, DATA_46 INTEGER, DATA_47 INTEGER, DATA_48 INTEGER, DATA_49 INTEGER, DATA_50 INTEGER, DATA_51 INTEGER, DATA_52 INTEGER, DATA_53 INTEGER, DATA_54 INTEGER, DATA_55 INTEGER, DATA_56 INTEGER, DATA_57 INTEGER, DATA_58 INTEGER, DATA_59 INTEGER, DATA_60 INTEGER, DATA_61 INTEGER, DATA_62 INTEGER, DATA_63 INTEGER)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "FOREIGN KEY",
+                            "definition": "REFERENCES MAT_DATA_SLOT0 (ID)"
+                        }
+                    ]
+                },
+                {
+                    "name": "DATA_0",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_1",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_2",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_3",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_4",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_5",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_6",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_7",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_8",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_9",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_10",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_11",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_12",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_13",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_14",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_15",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_16",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_17",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_18",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_19",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_20",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_22",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_23",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_24",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_25",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_26",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_27",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_28",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_29",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_30",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_31",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_32",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_33",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_34",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_35",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_36",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_37",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_38",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_39",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_40",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_41",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_42",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_43",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_44",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_45",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_46",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_47",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_48",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_49",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_50",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_51",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_52",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_53",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_54",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_55",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_56",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_57",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_58",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_59",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_60",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_61",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_62",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_63",
+                    "type": "INTEGER"
+                }
+            ],
+            "rows": [
+                [
+                    677,
+                    0,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    678,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    679,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    680,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    681,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    682,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    683,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    684,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    685,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_DATA_SLOT3",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_DATA_SLOT3 (ID INTEGER REFERENCES MAT_DATA_SLOT0 (ID), DATA_0 INTEGER, DATA_1 INTEGER, DATA_2 INTEGER, DATA_3 INTEGER, DATA_4 INTEGER, DATA_5 INTEGER, DATA_6 INTEGER, DATA_7 INTEGER, DATA_8 INTEGER, DATA_9 INTEGER, DATA_10 INTEGER, DATA_11 INTEGER, DATA_12 INTEGER, DATA_13 INTEGER, DATA_14 INTEGER, DATA_15 INTEGER, DATA_16 INTEGER, DATA_17 INTEGER, DATA_18 INTEGER, DATA_19 INTEGER, DATA_20 INTEGER, DATA_22 INTEGER, DATA_23 INTEGER, DATA_24 INTEGER, DATA_25 INTEGER, DATA_26 INTEGER, DATA_27 INTEGER, DATA_28 INTEGER, DATA_29 INTEGER, DATA_30 INTEGER, DATA_31 INTEGER, DATA_32 INTEGER, DATA_33 INTEGER, DATA_34 INTEGER, DATA_35 INTEGER, DATA_36 INTEGER, DATA_37 INTEGER, DATA_38 INTEGER, DATA_39 INTEGER, DATA_40 INTEGER, DATA_41 INTEGER, DATA_42 INTEGER, DATA_43 INTEGER, DATA_44 INTEGER, DATA_45 INTEGER, DATA_46 INTEGER, DATA_47 INTEGER, DATA_48 INTEGER, DATA_49 INTEGER, DATA_50 INTEGER, DATA_51 INTEGER, DATA_52 INTEGER, DATA_53 INTEGER, DATA_54 INTEGER, DATA_55 INTEGER, DATA_56 INTEGER, DATA_57 INTEGER, DATA_58 INTEGER, DATA_59 INTEGER, DATA_60 INTEGER, DATA_61 INTEGER, DATA_62 INTEGER, DATA_63 INTEGER)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "FOREIGN KEY",
+                            "definition": "REFERENCES MAT_DATA_SLOT0 (ID)"
+                        }
+                    ]
+                },
+                {
+                    "name": "DATA_0",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_1",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_2",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_3",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_4",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_5",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_6",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_7",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_8",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_9",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_10",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_11",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_12",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_13",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_14",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_15",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_16",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_17",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_18",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_19",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_20",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_22",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_23",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_24",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_25",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_26",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_27",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_28",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_29",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_30",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_31",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_32",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_33",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_34",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_35",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_36",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_37",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_38",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_39",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_40",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_41",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_42",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_43",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_44",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_45",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_46",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_47",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_48",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_49",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_50",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_51",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_52",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_53",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_54",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_55",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_56",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_57",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_58",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_59",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_60",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_61",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_62",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_63",
+                    "type": "INTEGER"
+                }
+            ],
+            "rows": [
+                [
+                    677,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    678,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    679,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    680,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    681,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    682,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    683,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    684,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    685,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_DATA_SLOT4",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_DATA_SLOT4 (ID INTEGER REFERENCES MAT_DATA_SLOT0 (ID), DATA_0 INTEGER, DATA_1 INTEGER, DATA_2 INTEGER, DATA_3 INTEGER, DATA_4 INTEGER, DATA_5 INTEGER, DATA_6 INTEGER, DATA_7 INTEGER, DATA_8 INTEGER, DATA_9 INTEGER, DATA_10 INTEGER, DATA_11 INTEGER, DATA_12 INTEGER, DATA_13 INTEGER, DATA_14 INTEGER, DATA_15 INTEGER, DATA_16 INTEGER, DATA_17 INTEGER, DATA_18 INTEGER, DATA_19 INTEGER, DATA_20 INTEGER, DATA_21 INTEGER, DATA_22 INTEGER, DATA_23 INTEGER, DATA_24 INTEGER, DATA_25 INTEGER, DATA_26 INTEGER, DATA_27 INTEGER, DATA_28 INTEGER, DATA_29 INTEGER, DATA_30 INTEGER, DATA_31 INTEGER, DATA_32 INTEGER, DATA_33 INTEGER, DATA_34 INTEGER, DATA_35 INTEGER, DATA_36 INTEGER, DATA_37 INTEGER, DATA_38 INTEGER, DATA_39 INTEGER, DATA_40 INTEGER, DATA_41 INTEGER, DATA_42 INTEGER, DATA_43 INTEGER, DATA_44 INTEGER, DATA_45 INTEGER, DATA_46 INTEGER, DATA_47 INTEGER, DATA_48 INTEGER, DATA_49 INTEGER, DATA_50 INTEGER, DATA_51 INTEGER, DATA_52 INTEGER, DATA_53 INTEGER, DATA_54 INTEGER, DATA_55 INTEGER, DATA_56 INTEGER, DATA_57 INTEGER, DATA_58 INTEGER, DATA_59 INTEGER, DATA_60 INTEGER, DATA_61 INTEGER, DATA_62 INTEGER, DATA_63 INTEGER)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "FOREIGN KEY",
+                            "definition": "REFERENCES MAT_DATA_SLOT0 (ID)"
+                        }
+                    ]
+                },
+                {
+                    "name": "DATA_0",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_1",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_2",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_3",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_4",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_5",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_6",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_7",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_8",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_9",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_10",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_11",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_12",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_13",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_14",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_15",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_16",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_17",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_18",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_19",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_20",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_21",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_22",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_23",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_24",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_25",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_26",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_27",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_28",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_29",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_30",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_31",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_32",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_33",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_34",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_35",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_36",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_37",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_38",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_39",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_40",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_41",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_42",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_43",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_44",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_45",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_46",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_47",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_48",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_49",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_50",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_51",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_52",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_53",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_54",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_55",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_56",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_57",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_58",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_59",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_60",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_61",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_62",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_63",
+                    "type": "INTEGER"
+                }
+            ],
+            "rows": [
+                [
+                    677,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    678,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    679,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    680,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    681,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    682,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    683,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    684,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    685,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_DATA_SLOT8",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_DATA_SLOT8 (ID INTEGER REFERENCES MAT_DATA_SLOT0 (ID), DATA_0 INTEGER, DATA_1 INTEGER, DATA_2 INTEGER, DATA_3 INTEGER, DATA_4 INTEGER, DATA_5 INTEGER, DATA_6 INTEGER, DATA_7 INTEGER, DATA_8 INTEGER, DATA_9 INTEGER, DATA_10 INTEGER, DATA_11 INTEGER, DATA_12 INTEGER, DATA_13 INTEGER, DATA_14 INTEGER, DATA_15 INTEGER, DATA_16 INTEGER, DATA_17 INTEGER, DATA_18 INTEGER, DATA_19 INTEGER, DATA_20 INTEGER, DATA_21 INTEGER, DATA_22 INTEGER, DATA_23 INTEGER, DATA_24 INTEGER, DATA_25 INTEGER, DATA_26 INTEGER, DATA_27 INTEGER, DATA_28 INTEGER, DATA_29 INTEGER, DATA_30 INTEGER, DATA_31 INTEGER, DATA_32 INTEGER, DATA_33 INTEGER, DATA_34 INTEGER, DATA_35 INTEGER, DATA_36 INTEGER, DATA_37 INTEGER, DATA_38 INTEGER, DATA_39 INTEGER, DATA_40 INTEGER, DATA_41 INTEGER, DATA_42 INTEGER, DATA_43 INTEGER, DATA_44 INTEGER, DATA_45 INTEGER, DATA_46 INTEGER, DATA_47 INTEGER, DATA_48 INTEGER, DATA_49 INTEGER, DATA_50 INTEGER, DATA_51 INTEGER, DATA_52 INTEGER, DATA_53 INTEGER, DATA_54 INTEGER, DATA_55 INTEGER, DATA_56 INTEGER, DATA_57 INTEGER, DATA_58 INTEGER, DATA_59 INTEGER, DATA_60 INTEGER, DATA_61 INTEGER, DATA_62 INTEGER, DATA_63 INTEGER)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "FOREIGN KEY",
+                            "definition": "REFERENCES MAT_DATA_SLOT0 (ID)"
+                        }
+                    ]
+                },
+                {
+                    "name": "DATA_0",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_1",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_2",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_3",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_4",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_5",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_6",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_7",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_8",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_9",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_10",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_11",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_12",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_13",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_14",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_15",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_16",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_17",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_18",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_19",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_20",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_21",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_22",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_23",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_24",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_25",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_26",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_27",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_28",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_29",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_30",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_31",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_32",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_33",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_34",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_35",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_36",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_37",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_38",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_39",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_40",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_41",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_42",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_43",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_44",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_45",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_46",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_47",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_48",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_49",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_50",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_51",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_52",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_53",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_54",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_55",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_56",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_57",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_58",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_59",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_60",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_61",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_62",
+                    "type": "INTEGER"
+                },
+                {
+                    "name": "DATA_63",
+                    "type": "INTEGER"
+                }
+            ],
+            "rows": [
+                [
+                    677,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    3,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0,
+                    0
+                ],
+                [
+                    678,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    679,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    680,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    681,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    682,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    683,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    684,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ],
+                [
+                    685,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null,
+                    null
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_HEADER_SLOT0",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_HEADER_SLOT0 (ID INTEGER PRIMARY KEY, en_US TEXT, zh_TW TEXT)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "en_US",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "zh_TW",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    0,
+                    "Sn",
+                    "流水號"
+                ],
+                [
+                    1,
+                    "TimeStamp",
+                    "時間戳記"
+                ],
+                [
+                    2,
+                    "LSetKey",
+                    "左設定鍵"
+                ],
+                [
+                    3,
+                    "LSetHousing",
+                    "左設定殼"
+                ],
+                [
+                    4,
+                    "RSetKey",
+                    "右設定鍵"
+                ],
+                [
+                    5,
+                    "RSetHousing",
+                    "右設定殼"
+                ],
+                [
+                    6,
+                    "WorkingNumber",
+                    "工單號"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_HEADER_SLOT1",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_HEADER_SLOT1 (ID INTEGER PRIMARY KEY AUTOINCREMENT, en_US TEXT, zh_TW TEXT)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "en_US",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "zh_TW",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    0,
+                    null,
+                    "Rside_OK\/NG     1:0"
+                ],
+                [
+                    1,
+                    null,
+                    "Rside_塑膠區A   MAX"
+                ],
+                [
+                    2,
+                    null,
+                    "Rside_塑膠區B   MAX"
+                ],
+                [
+                    3,
+                    null,
+                    "Rside_塑膠區C   MAX"
+                ],
+                [
+                    4,
+                    null,
+                    "Rside_塑膠區D   MAX"
+                ],
+                [
+                    5,
+                    null,
+                    "Rside_塑膠區E   MAX"
+                ],
+                [
+                    6,
+                    null,
+                    "Rside_鐵殼污點  MAX"
+                ],
+                [
+                    7,
+                    null,
+                    "Rside_長度         L1L2 um"
+                ],
+                [
+                    8,
+                    null,
+                    "Rside_PoLARIZEr(B,FK,DH,A,CG,EJ)"
+                ],
+                [
+                    9,
+                    null,
+                    "Rside_pattern match"
+                ],
+                [
+                    10,
+                    null,
+                    "Lside_OK\/NG     1:0"
+                ],
+                [
+                    11,
+                    null,
+                    "Lside_塑膠區A   MAX"
+                ],
+                [
+                    12,
+                    null,
+                    "Lside_塑膠區B   MAX"
+                ],
+                [
+                    13,
+                    null,
+                    "Lside_塑膠區C   MAX"
+                ],
+                [
+                    14,
+                    null,
+                    "Lside_塑膠區D   MAX"
+                ],
+                [
+                    15,
+                    null,
+                    "Lside_塑膠區E   MAX"
+                ],
+                [
+                    16,
+                    null,
+                    "Lside_鐵殼污點  MAX"
+                ],
+                [
+                    17,
+                    null,
+                    "Lside_長度         L1L2"
+                ],
+                [
+                    18,
+                    null,
+                    "Lside_PoLARIZEr(B,FK,DH,A,CG,EJ)"
+                ],
+                [
+                    19,
+                    null,
+                    "Lside_pattern match"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_HEADER_SLOT15",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_HEADER_SLOT15 (ID INTEGER PRIMARY KEY AUTOINCREMENT, en_US TEXT, zh_TW TEXT)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "en_US",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "zh_TW",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    0,
+                    "",
+                    "流水號"
+                ],
+                [
+                    1,
+                    "Grade",
+                    "分選值"
+                ],
+                [
+                    2,
+                    "LActKey",
+                    "左實際鍵"
+                ],
+                [
+                    3,
+                    "LActHousing",
+                    "左實際殼"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_HEADER_SLOT3",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_HEADER_SLOT3 (ID INTEGER PRIMARY KEY AUTOINCREMENT, en_US TEXT, zh_TW TEXT)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "en_US",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "zh_TW",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    0,
+                    null,
+                    "流水號"
+                ],
+                [
+                    1,
+                    "OK\/NG",
+                    "判定"
+                ],
+                [
+                    2,
+                    "Attached",
+                    "電測連接"
+                ],
+                [
+                    3,
+                    "CableCount",
+                    "電測結果"
+                ],
+                [
+                    4,
+                    null,
+                    "舌片多膠A"
+                ],
+                [
+                    5,
+                    null,
+                    "舌片多膠B"
+                ],
+                [
+                    6,
+                    null,
+                    "舌片有無A"
+                ],
+                [
+                    7,
+                    null,
+                    "舌片有無B"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_HEADER_SLOT4",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_HEADER_SLOT4 (ID INTEGER PRIMARY KEY AUTOINCREMENT, en_US TEXT, zh_TW TEXT)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "en_US",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "zh_TW",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    0,
+                    null,
+                    "Rside_OK\/NG     1:0"
+                ],
+                [
+                    1,
+                    null,
+                    "Rside_極性 15:16"
+                ],
+                [
+                    2,
+                    null,
+                    "Rside_塑膠面A-H  MAX"
+                ],
+                [
+                    3,
+                    null,
+                    "Rside_有無M   差分"
+                ],
+                [
+                    4,
+                    null,
+                    "Rside_L1-10 十組MAX落差 L1"
+                ],
+                [
+                    5,
+                    null,
+                    "Rside_L1-10 十組MAX落差 L2"
+                ],
+                [
+                    6,
+                    null,
+                    "Rside_L1-10 十組MAX落差 L3"
+                ],
+                [
+                    7,
+                    null,
+                    "Rside_L1-10 十組MAX落差 L4"
+                ],
+                [
+                    8,
+                    null,
+                    "Rside_L1-10 十組MAX落差 L5"
+                ],
+                [
+                    9,
+                    null,
+                    "Rside_L1-10 十組MAX落差 L6"
+                ],
+                [
+                    10,
+                    null,
+                    "Rside_L1-10 十組MAX落差 L7"
+                ],
+                [
+                    11,
+                    null,
+                    "Rside_L1-10 十組MAX落差 L8"
+                ],
+                [
+                    12,
+                    null,
+                    "Rside_L1-10 十組MAX落差 L9"
+                ],
+                [
+                    13,
+                    null,
+                    "Rside_L1-10 十組MAX落差 L10"
+                ],
+                [
+                    14,
+                    null,
+                    "Rside_KAKBKC MAX"
+                ],
+                [
+                    15,
+                    null,
+                    "Rside_Iron abcd  MAX"
+                ],
+                [
+                    16,
+                    null,
+                    "Rside_Center Point 特幾組(基本三組)"
+                ],
+                [
+                    17,
+                    null,
+                    "Rside_Center Point 特幾組"
+                ],
+                [
+                    18,
+                    null,
+                    "Rside_Center Point 特幾組"
+                ],
+                [
+                    19,
+                    null,
+                    "Rside_Center Point 特幾組"
+                ],
+                [
+                    20,
+                    null,
+                    "Rside_Center Point 特幾組"
+                ],
+                [
+                    21,
+                    null,
+                    "Lside_OK\/NG     1:0"
+                ],
+                [
+                    22,
+                    null,
+                    "Lside_極性 15:16"
+                ],
+                [
+                    23,
+                    null,
+                    "Lside_塑膠面A-H  MAX"
+                ],
+                [
+                    24,
+                    null,
+                    "Lside_有無M   差分"
+                ],
+                [
+                    25,
+                    null,
+                    "Lside_L1-10 十組MAX落差 L1"
+                ],
+                [
+                    26,
+                    null,
+                    "Lside_L1-10 十組MAX落差 L2"
+                ],
+                [
+                    27,
+                    null,
+                    "Lside_L1-10 十組MAX落差 L3"
+                ],
+                [
+                    28,
+                    null,
+                    "Lside_L1-10 十組MAX落差 L4"
+                ],
+                [
+                    29,
+                    null,
+                    "Lside_L1-10 十組MAX落差 L5"
+                ],
+                [
+                    30,
+                    null,
+                    "Lside_L1-10 十組MAX落差 L6"
+                ],
+                [
+                    31,
+                    null,
+                    "Lside_L1-10 十組MAX落差 L7"
+                ],
+                [
+                    32,
+                    null,
+                    "Lside_L1-10 十組MAX落差 L8"
+                ],
+                [
+                    33,
+                    null,
+                    "Lside_L1-10 十組MAX落差 L9"
+                ],
+                [
+                    34,
+                    null,
+                    "Lside_L1-10 十組MAX落差 L10"
+                ],
+                [
+                    35,
+                    null,
+                    "Lside_KAKBKC MAX"
+                ],
+                [
+                    36,
+                    null,
+                    "Lside_Iron abcd  MAX"
+                ],
+                [
+                    37,
+                    null,
+                    "Lside_Center Point 特幾組(基本三組)"
+                ],
+                [
+                    38,
+                    null,
+                    "Lside_Center Point 特幾組"
+                ],
+                [
+                    39,
+                    null,
+                    "Lside_Center Point 特幾組"
+                ],
+                [
+                    40,
+                    null,
+                    "Lside_Center Point 特幾組"
+                ],
+                [
+                    41,
+                    null,
+                    "Lside_Center Point 特幾組"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_HEADER_SLOT8",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_HEADER_SLOT8 (ID INTEGER PRIMARY KEY AUTOINCREMENT, en_US TEXT, zh_TW TEXT)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY AUTOINCREMENT"
+                        }
+                    ]
+                },
+                {
+                    "name": "en_US",
+                    "type": "TEXT"
+                },
+                {
+                    "name": "zh_TW",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    0,
+                    null,
+                    "Rside_OK\/NG     1:0"
+                ],
+                [
+                    1,
+                    null,
+                    "Rside_污點A   MAX"
+                ],
+                [
+                    2,
+                    null,
+                    "Rside_污點B   MAX"
+                ],
+                [
+                    3,
+                    null,
+                    "Rside_污點C   MAX"
+                ],
+                [
+                    4,
+                    null,
+                    "Rside_MD       MAX"
+                ],
+                [
+                    5,
+                    null,
+                    "Rside_共面 a    MAX"
+                ],
+                [
+                    6,
+                    null,
+                    "Rside_Pin1      Height"
+                ],
+                [
+                    7,
+                    null,
+                    "Rside_Pin2      Height"
+                ],
+                [
+                    8,
+                    null,
+                    "Rside_Pin3      Height"
+                ],
+                [
+                    9,
+                    null,
+                    "Rside_Pin4      Height"
+                ],
+                [
+                    10,
+                    null,
+                    "Rside_Pin5      Height"
+                ],
+                [
+                    11,
+                    null,
+                    "Rside_Pin1     上翹 0\/1"
+                ],
+                [
+                    12,
+                    null,
+                    "Rside_Pin2     上翹 0\/1"
+                ],
+                [
+                    13,
+                    null,
+                    "Rside_Pin3     上翹 0\/1"
+                ],
+                [
+                    14,
+                    null,
+                    "Rside_Pin4     上翹 0\/1"
+                ],
+                [
+                    15,
+                    null,
+                    "Rside_Pin5     上翹 0\/1"
+                ],
+                [
+                    16,
+                    null,
+                    "Rside_極性A-K..Shell-A Shell-B"
+                ],
+                [
+                    17,
+                    null,
+                    "Rside_特內部   大於臨界值"
+                ],
+                [
+                    18,
+                    null,
+                    "Rside_特內部   大於臨界值"
+                ],
+                [
+                    19,
+                    null,
+                    "Rside_特內部   大於臨界值"
+                ],
+                [
+                    20,
+                    null,
+                    "Rside_特內部   大於臨界值"
+                ],
+                [
+                    21,
+                    null,
+                    "Rside_特內部   大於臨界值"
+                ],
+                [
+                    22,
+                    null,
+                    "Rside_KD Max"
+                ],
+                [
+                    23,
+                    null,
+                    "Rside_Pattern match"
+                ],
+                [
+                    24,
+                    null,
+                    "Rside_Pin A區異物"
+                ],
+                [
+                    25,
+                    null,
+                    "Rside_Pin B區異物"
+                ],
+                [
+                    26,
+                    null,
+                    "Rside_Pin C區異物"
+                ],
+                [
+                    27,
+                    null,
+                    "Rside_Pin D區異物"
+                ],
+                [
+                    28,
+                    null,
+                    "Rside_Pin E區異物"
+                ],
+                [
+                    29,
+                    null,
+                    "Rside_Pin F區異物"
+                ],
+                [
+                    30,
+                    null,
+                    "Lside_OK\/NG     1:0"
+                ],
+                [
+                    31,
+                    null,
+                    "Lside_污點A   MAX"
+                ],
+                [
+                    32,
+                    null,
+                    "Lside_污點B   MAX"
+                ],
+                [
+                    33,
+                    null,
+                    "Lside_污點C   MAX"
+                ],
+                [
+                    34,
+                    null,
+                    "Lside_MD       MAX"
+                ],
+                [
+                    35,
+                    null,
+                    "Lside_共面 a    MAX"
+                ],
+                [
+                    36,
+                    null,
+                    "Lside_Pin1      Height"
+                ],
+                [
+                    37,
+                    null,
+                    "Lside_Pin2      Height"
+                ],
+                [
+                    38,
+                    null,
+                    "Lside_Pin3      Height"
+                ],
+                [
+                    39,
+                    null,
+                    "Lside_Pin4      Height"
+                ],
+                [
+                    40,
+                    null,
+                    "Lside_Pin5      Height"
+                ],
+                [
+                    41,
+                    null,
+                    "Lside_Pin1     上翹 0\/1"
+                ],
+                [
+                    42,
+                    null,
+                    "Lside_Pin2     上翹 0\/1"
+                ],
+                [
+                    43,
+                    null,
+                    "Lside_Pin3     上翹 0\/1"
+                ],
+                [
+                    44,
+                    null,
+                    "Lside_Pin4     上翹 0\/1"
+                ],
+                [
+                    45,
+                    null,
+                    "Lside_Pin5     上翹 0\/1"
+                ],
+                [
+                    46,
+                    null,
+                    "Lside_極性A-K..Shell-A Shell-B"
+                ],
+                [
+                    47,
+                    null,
+                    "Lside_特內部   大於臨界值"
+                ],
+                [
+                    48,
+                    null,
+                    "Lside_特內部   大於臨界值"
+                ],
+                [
+                    49,
+                    null,
+                    "Lside_特內部   大於臨界值"
+                ],
+                [
+                    50,
+                    null,
+                    "Lside_特內部   大於臨界值"
+                ],
+                [
+                    51,
+                    null,
+                    "Lside_特內部   大於臨界值"
+                ],
+                [
+                    52,
+                    null,
+                    "Lside_KD Max"
+                ],
+                [
+                    53,
+                    null,
+                    "Lside_Pattern match"
+                ],
+                [
+                    54,
+                    null,
+                    "Lside_PinA區異物"
+                ],
+                [
+                    55,
+                    null,
+                    "Lside_PinB區異物"
+                ],
+                [
+                    56,
+                    null,
+                    "Lside_PinC區異物"
+                ],
+                [
+                    57,
+                    null,
+                    "Lside_PinD區異物"
+                ],
+                [
+                    58,
+                    null,
+                    "Lside_PinE區異物"
+                ],
+                [
+                    59,
+                    null,
+                    "Lside_PinF區異物"
+                ],
+                [
+                    60,
+                    null,
+                    "Lside_PinF區異物"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_TABLE_HOUSING",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_TABLE_HOUSING (Number TEXT PRIMARY KEY, Polarization INTEGER REFERENCES MAT_CODE_HOUSING (ID), Color TEXT)",
+            "columns": [
+                {
+                    "name": "Number",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "Polarization",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "FOREIGN KEY",
+                            "definition": "REFERENCES MAT_CODE_HOUSING (ID)"
+                        }
+                    ]
+                },
+                {
+                    "name": "Color",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    "17200-7767",
+                    1,
+                    "Black"
+                ],
+                [
+                    "17200-7768",
+                    2,
+                    "Gray"
+                ],
+                [
+                    "47709-0003",
+                    1,
+                    "Black"
+                ],
+                [
+                    "47709-0004",
+                    2,
+                    "Gray"
+                ]
+            ]
+        },
+        {
+            "type": "table",
+            "database": null,
+            "name": "MAT_TABLE_KEY",
+            "withoutRowId": true,
+            "ddl": "CREATE TABLE MAT_TABLE_KEY (ID TEXT PRIMARY KEY, Polarization INTEGER REFERENCES MAT_CODE_KEY (ID), Color TEXT)",
+            "columns": [
+                {
+                    "name": "ID",
+                    "type": "TEXT",
+                    "constraints": [
+                        {
+                            "type": "PRIMARY KEY",
+                            "definition": "PRIMARY KEY"
+                        }
+                    ]
+                },
+                {
+                    "name": "Polarization",
+                    "type": "INTEGER",
+                    "constraints": [
+                        {
+                            "type": "FOREIGN KEY",
+                            "definition": "REFERENCES MAT_CODE_KEY (ID)"
+                        }
+                    ]
+                },
+                {
+                    "name": "Color",
+                    "type": "TEXT"
+                }
+            ],
+            "rows": [
+                [
+                    "111014-0010",
+                    1,
+                    "Black"
+                ],
+                [
+                    "111014-0020",
+                    2,
+                    "Gray"
+                ],
+                [
+                    "111014-0011",
+                    3,
+                    "Black"
+                ],
+                [
+                    "111014-0021",
+                    4,
+                    "Gray"
+                ],
+                [
+                    "111014-0012",
+                    5,
+                    "Black"
+                ],
+                [
+                    "111014-0022",
+                    6,
+                    "Gray"
+                ],
+                [
+                    "111014-0013",
+                    7,
+                    "Black"
+                ],
+                [
+                    "111014-0023",
+                    8,
+                    "Gray"
+                ],
+                [
+                    "111014-0014",
+                    10,
+                    "Black"
+                ],
+                [
+                    "111014-0024",
+                    11,
+                    "Gray"
+                ],
+                [
+                    "111014-0015",
+                    3,
+                    "Brown"
+                ],
+                [
+                    "111014-0016",
+                    4,
+                    "Green"
+                ],
+                [
+                    "111014-0017",
+                    5,
+                    "Blue"
+                ],
+                [
+                    "111014-0018",
+                    6,
+                    "Natural"
+                ],
+                [
+                    "111014-0027",
+                    7,
+                    "Gray"
+                ],
+                [
+                    "111014-0053",
+                    8,
+                    "Green"
+                ],
+                [
+                    "111014-0106",
+                    7,
+                    "C.Violet"
+                ],
+                [
+                    "111014-0107",
+                    8,
+                    "BlueGray"
+                ],
+                [
+                    "111014-0108",
+                    10,
+                    "H. Violet"
+                ],
+                [
+                    "111014-0109",
+                    11,
+                    "Beige"
+                ]
+            ]
+        },
+        {
+            "type": "trigger",
+            "database": null,
+            "name": "DEL_OLD",
+            "ddl": "CREATE TRIGGER DEL_OLD AFTER UPDATE ON MAT_DATA_SLOT8 BEGIN delete from MAT_DATA_SLOT15 where ID<=(new.ID-256); END",
+            "timing": "AFTER",
+            "action": "UPDATE",
+            "table": "MAT_DATA_SLOT8",
+            "code": "delete from MAT_DATA_SLOT15 where ID<=(new.ID-256)"
+        },
+        {
+            "type": "trigger",
+            "database": null,
+            "name": "GEN_GRADE",
+            "ddl": "CREATE TRIGGER GEN_GRADE AFTER UPDATE ON MAT_DATA_SLOT8 BEGIN UPDATE MAT_DATA_SLOT15 SET DATA_0 = (new.DATA_0 == 1 AND new.DATA_28 == 1 AND (SELECT DATA_0 FROM MAT_DATA_SLOT1 WHERE ID = new.ID) == 1 AND (SELECT DATA_11 FROM MAT_DATA_SLOT1 WHERE ID = new.ID) == 1 AND (SELECT DATA_0 FROM MAT_DATA_SLOT4 WHERE ID = new.ID) == 1 AND (SELECT DATA_23 FROM MAT_DATA_SLOT4 WHERE ID = new.ID) == 1) WHERE ID = new.ID; END",
+            "timing": "AFTER",
+            "action": "UPDATE",
+            "table": "MAT_DATA_SLOT8",
+            "code": "UPDATE MAT_DATA_SLOT15 SET DATA_0 = (new.DATA_0 == 1 AND new.DATA_28 == 1 AND (SELECT DATA_0 FROM MAT_DATA_SLOT1 WHERE ID = new.ID) == 1 AND (SELECT DATA_11 FROM MAT_DATA_SLOT1 WHERE ID = new.ID) == 1 AND (SELECT DATA_0 FROM MAT_DATA_SLOT4 WHERE ID = new.ID) == 1 AND (SELECT DATA_23 FROM MAT_DATA_SLOT4 WHERE ID = new.ID) == 1) WHERE ID = new.ID"
+        },
+        {
+            "type": "trigger",
+            "database": null,
+            "name": "GEN_TIME",
+            "ddl": "CREATE TRIGGER GEN_TIME AFTER INSERT ON MAT_DATA_SLOT0 BEGIN UPDATE MAT_DATA_SLOT0 SET DATA_0 = datetime('now') WHERE ID = new.ID; END",
+            "timing": "AFTER",
+            "action": "INSERT",
+            "table": "MAT_DATA_SLOT0",
+            "code": "UPDATE MAT_DATA_SLOT0 SET DATA_0 = datetime('now') WHERE ID = new.ID"
+        },
+        {
+            "type": "trigger",
+            "database": null,
+            "name": "SYNC_DELETE",
+            "ddl": "CREATE TRIGGER SYNC_DELETE AFTER DELETE ON MAT_DATA_SLOT15 BEGIN DELETE FROM MAT_DATA_SLOT0 WHERE ID = old.ID; DELETE FROM MAT_DATA_SLOT1 WHERE ID = old.ID; DELETE FROM MAT_DATA_SLOT3 WHERE ID = old.ID; DELETE FROM MAT_DATA_SLOT4 WHERE ID = old.ID; DELETE FROM MAT_DATA_SLOT8 WHERE ID = old.ID; END",
+            "timing": "AFTER",
+            "action": "DELETE",
+            "table": "MAT_DATA_SLOT15",
+            "code": "DELETE FROM MAT_DATA_SLOT0 WHERE ID = old.ID\nDELETE FROM MAT_DATA_SLOT1 WHERE ID = old.ID\nDELETE FROM MAT_DATA_SLOT3 WHERE ID = old.ID\nDELETE FROM MAT_DATA_SLOT4 WHERE ID = old.ID\nDELETE FROM MAT_DATA_SLOT8 WHERE ID = old.ID"
+        },
+        {
+            "type": "trigger",
+            "database": null,
+            "name": "SYNC_INSERT",
+            "ddl": "CREATE TRIGGER SYNC_INSERT AFTER INSERT ON MAT_DATA_SLOT0 BEGIN INSERT INTO MAT_DATA_SLOT1 (ID) VALUES (new.ID); INSERT INTO MAT_DATA_SLOT3 (ID) VALUES (new.ID); INSERT INTO MAT_DATA_SLOT4 (ID) VALUES (new.ID); INSERT INTO MAT_DATA_SLOT8 (ID) VALUES (new.ID); INSERT INTO MAT_DATA_SLOT15 (ID) VALUES (new.ID); END",
+            "timing": "AFTER",
+            "action": "INSERT",
+            "table": "MAT_DATA_SLOT0",
+            "code": "INSERT INTO MAT_DATA_SLOT1 (ID) VALUES (new.ID)\nINSERT INTO MAT_DATA_SLOT3 (ID) VALUES (new.ID)\nINSERT INTO MAT_DATA_SLOT4 (ID) VALUES (new.ID)\nINSERT INTO MAT_DATA_SLOT8 (ID) VALUES (new.ID)\nINSERT INTO MAT_DATA_SLOT15 (ID) VALUES (new.ID)"
+        },
+        {
+            "type": "view",
+            "database": null,
+            "name": "VIEW_MAT_TABLE_HOUSING",
+            "ddl": "CREATE VIEW VIEW_MAT_TABLE_HOUSING AS select * ,\n(select B.NAME from MAT_CODE_HOUSING B where A.Polarization=B.ID) As POL_H\nfrom MAT_TABLE_HOUSING A",
+            "select": "select * ,\n(select B.NAME from MAT_CODE_HOUSING B where A.Polarization=B.ID) As POL_H\nfrom MAT_TABLE_HOUSING A"
+        },
+        {
+            "type": "view",
+            "database": null,
+            "name": "VIEW_MAT_TABLE_KEY",
+            "ddl": "CREATE VIEW VIEW_MAT_TABLE_KEY AS select * ,\n(select B.NAME from MAT_CODE_KEY B where Polarization=B.ID) AS POL_H\nfrom MAT_TABLE_KEY A",
+            "select": "select * ,\n(select B.NAME from MAT_CODE_KEY B where Polarization=B.ID) AS POL_H\nfrom MAT_TABLE_KEY A"
+        }
+    ]
+}
